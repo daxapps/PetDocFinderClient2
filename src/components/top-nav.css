@@ -1,0 +1,26 @@
+nav {
+	position: relative;
+	height: 60px;
+	padding: 1em;
+	background-color: lightgray;
+}
+
+nav ul li {
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 1.2em;
+}
+
+nav ul li:first-child {
+	float: left;
+}
+
+nav ul li {
+	float: right;
+	display: inline-block;
+	margin: 0 10px;
+}
+
+nav a {
+	/*color: #fff;*/
+}

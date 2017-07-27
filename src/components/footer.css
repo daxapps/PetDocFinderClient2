@@ -1,0 +1,11 @@
+footer {
+	height: 100px;
+	background-color: black;
+}
+
+h4 {
+	position: absolute;
+	color: white;
+	margin-left: 20px;
+	margin-top: 40px;
+}

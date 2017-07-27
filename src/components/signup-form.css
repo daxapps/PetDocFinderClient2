@@ -1,0 +1,16 @@
+.container {
+	position: absolute;
+	/*display: block;*/
+	border: 2px solid gray;
+	width: 30%;
+	height: 200px;
+	margin: 30% 35%;
+  /*padding: 300px 0 0;*/
+	
+}
+
+input {
+	display: block;
+	margin: 10px auto;
+}
+
