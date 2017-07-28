@@ -1,39 +1,25 @@
 import React from 'react';
-// import {connect} from 'react-redux';
+// import {Router, Route, Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
+// import App from './app';
+// import Vetlist from './vetlist';
 
 import './top-nav.css';
 
-export class TopNav extends React.Component {
+export default function TopNav() {
 
-    render() {
-        return (
-            <nav>
-                <ul>
-                    <li>
-                        <a className="" href="#">
-                            Home
-                        </a>
-                    </li>
-                    <li>
-                        <a className="" href="#">
-                            Vet List
-                        </a>
-                    </li>
-                    <li>
-                        <a className="" href="#">
-                            Signup
-                        </a>
-                    </li>
-                     <li>
-                        <a className="" href="#">
-                            Login
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        );
-    }
+    
+    return (
+     		<nav>
+          <ul>
+             <Link to="/">Home</Link> 
+             <Link to="/vetlist">Vet List</Link> 
+          </ul>
+        </nav>
+    
+        
+    );
 };
 
-export default TopNav;
+
 

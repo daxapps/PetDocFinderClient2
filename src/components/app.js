@@ -1,14 +1,15 @@
-import React, { Component } from 'react';
-// import logo from './logo.svg';
-import './app.css';
+import React from 'react';
+// import TopNav from './top-nav';
 import Header from './header';
 import Footer from './footer';
 import SignupForm from './signup-form';
+import './app.css';
 
 
 export default function App(){
     return (
       <div>
+       
         <Header />
         <section>
           <h3>Make an Informed Decision</h3>
