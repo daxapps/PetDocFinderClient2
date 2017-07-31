@@ -3,7 +3,7 @@ import { combineReducers } from "redux";
 import ReviewsReducer from "./reducer_reviews";
 
 const rootReducer = combineReducers({
-  posts: ReviewsReducer,
+  reviews: ReviewsReducer,
   // form: formReducer
 });
 

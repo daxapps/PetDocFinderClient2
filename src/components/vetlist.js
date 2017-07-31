@@ -15,7 +15,7 @@ class Vetlist extends Component {
       <div>      
         Vet List      
       </div>
-    );
+      );
   }
 
 
@@ -26,4 +26,9 @@ class Vetlist extends Component {
 //   return { posts: state.posts };
 // }
 
-export default connect(null, { fetchReviews })(Vetlist);
+const mapDispatchToProps = (dispatch) => { 
+  return { fetchReviews: (reviews) => dispatch(fetchReviews()) 
+  }; 
+};
+
+export default connect(null, mapDispatchToProps)(Vetlist);
