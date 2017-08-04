@@ -5,7 +5,7 @@ import './signup-form.css';
 export function SignupForm() {
 
     return (
-        <form>
+        <form method="POST" className="forms">
         	<div className="container">
 			    <h5>Find Your Pet Doc Today</h5>
 			    <input type="text" placeholder="Username" name="username" required></input>
