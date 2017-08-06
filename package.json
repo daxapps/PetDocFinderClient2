@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@google/maps": "^0.4.3",
     "@mapbox/point-geometry": "^0.1.0",
     "axios": "^0.16.2",
     "body-parser": "^1.17.2",
