@@ -1,11 +1,11 @@
 section {
   height: 100vh;
-  background-color: lightgreen;
+  background-color: #f3c2a4;
   text-align: center;
 }
 
 section:nth-child(odd) {
-  background: lightyellow;
+  background: #0ddfff;
 }
 
 h3 {
