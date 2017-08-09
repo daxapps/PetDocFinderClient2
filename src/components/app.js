@@ -5,7 +5,7 @@ import Footer from "./footer";
 import "./app.css";
 
 import { connect } from "react-redux";
-import { Route, withRouter } from "react-router-dom";
+import { Route, withRouter, BrowserRouter } from "react-router-dom";
 
 // import HeaderBar from "./header-bar";
 import LandingPage from "./landing-page";
@@ -53,6 +53,7 @@ export class App extends React.Component {
 
   render() {
     return (
+      <BrowserRouter>
       <div className="app">
         <TopNav />
         <Header />
@@ -79,6 +80,7 @@ export class App extends React.Component {
 
         <Footer />
       </div>
+      </BrowserRouter>
     );
   }
 }
