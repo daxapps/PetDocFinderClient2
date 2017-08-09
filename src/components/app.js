@@ -7,7 +7,7 @@ import "./app.css";
 import { connect } from "react-redux";
 import { Route, withRouter } from "react-router-dom";
 
-import HeaderBar from "./header-bar";
+// import HeaderBar from "./header-bar";
 import LandingPage from "./landing-page";
 import Dashboard from "./dashboard";
 import RegistrationPage from "./registration-page";
@@ -73,12 +73,8 @@ export class App extends React.Component {
         </section>
         <section>
         <Route exact path="/" component={LandingPage} />
-        </section>
-        <section>
         <Route exact path="/dashboard" component={Dashboard} />
-        </section>
-        <section>
-          <HeaderBar />
+         
           <Route exact path="/register" component={RegistrationPage} />
         </section>
 
