@@ -33,7 +33,10 @@ export default function TopNav() {
 						<li><Link to="/">Home</Link></li>
 					</ul>
 					<ul className="nav navbar-nav navbar-right">
-						<li><Link to="/vetlist">Vet List</Link></li>
+						<li><Link to="/register">SignUp</Link></li>
+					</ul>
+					<ul className="nav navbar-nav navbar-right">
+						<li><Link to="/dashboard">Vet List</Link></li>
 					</ul>
 				</div>
 			</div>
