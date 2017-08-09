@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 // import Vetlist from './vetlist';
 import HeaderBar from "./header-bar";
 
-
 import "./top-nav.css";
 
 export default function TopNav() {
@@ -25,23 +24,30 @@ export default function TopNav() {
 						<span className="icon-bar" />
 						<span className="icon-bar" />
 					</button>
-					
 				</div>
 				<div
 					className="collapse navbar-collapse"
 					id="bs-example-navbar-collapse-1"
 				>
 					<ul className="nav navbar-nav navbar-left">
-						<li><Link to="/">Home</Link></li>
+						<li>
+							<Link to="/">Home</Link>
+						</li>
 					</ul>
 					<ul className="nav navbar-nav navbar-right">
-						<li><Link to="/register">SignUp</Link></li>
+						<li>
+							<Link to="/register">SignUp</Link>
+						</li>
 					</ul>
 					<ul className="nav navbar-nav navbar-right">
-						<li><Link to="/dashboard">Login</Link></li>
+						<li>
+							<Link to="/dashboard">Login</Link>
+						</li>
 					</ul>
 					<ul className="nav navbar-nav navbar-right">
-						<li><HeaderBar /></li>
+						<li>
+							<HeaderBar />
+						</li>
 					</ul>
 				</div>
 			</div>
