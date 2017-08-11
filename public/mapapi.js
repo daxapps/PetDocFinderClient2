@@ -99,7 +99,7 @@ function createMarkers(places) {
       position: place.geometry.location
     });
     console.log("PLACE: ", place)
-    placesList.innerHTML += "<li data-id='"+place.place_id+"'>" + place.name + " Rating: " + place.rating +"</li>";
+    placesList.innerHTML += "<li data-id='"+place.place_id+"'>" + place.name + " Rating: " +place.rating +"</li>";
 
     bounds.extend(place.geometry.location);
   }
@@ -107,16 +107,22 @@ function createMarkers(places) {
 
   $("#places").on('click', 'li', function(e){
   let currentPlace = {
-    name: $(this).text(),
-    dataId: $(this).attr('data-id')
+    vetName: $(this).text(),
+    googleDataId: $(this).attr('data-id')
   }
+  console.log('CURRENT: ',currentPlace)
+
   $.ajax({
     url: 'http://localhost:8080/api/vets/vetlist',
     data: currentPlace,
     method: 'POST'
   })
+  .done(function(data){
+    console.log('need to open dropdown with data', data)
+  })
 
-  console.log('CURRENT: ',currentPlace)
+
+  console.log('CURRENT2: ',currentPlace)
 })
 }
 google.maps.event.addDomListener(window, "load", initMap);
