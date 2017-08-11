@@ -12,7 +12,7 @@ function initMap() {
     zoom: 12
   });
 
-// Try HTML5 geolocation.
+// HTML5 geolocation.
   infoWindow = new google.maps.InfoWindow();
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(
@@ -23,8 +23,8 @@ function initMap() {
         };
 
         infoWindow.setPosition(pos);
-        // infoWindow.setContent("Location found.");
-        // infoWindow.open(map);
+        infoWindow.setContent("⭐️");
+        infoWindow.open(map);
         map.setCenter(pos);
 
         var service = new google.maps.places.PlacesService(map);
@@ -99,7 +99,7 @@ function createMarkers(places) {
       position: place.geometry.location
     });
     console.log("PLACE: ", place)
-    placesList.innerHTML += "<li data-id='"+place.place_id+"'>" + place.name + "</li>";
+    placesList.innerHTML += "<li data-id='"+place.place_id+"'>" + place.name + " Rating: " + place.rating +"</li>";
 
     bounds.extend(place.geometry.location);
   }
@@ -111,7 +111,7 @@ function createMarkers(places) {
     dataId: $(this).attr('data-id')
   }
   $.ajax({
-    url: 'http://localhost:8080/vetprice',
+    url: 'http://localhost:8080/api/vets/vetlist',
     data: currentPlace,
     method: 'POST'
   })
