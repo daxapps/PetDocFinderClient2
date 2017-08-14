@@ -1,6 +1,8 @@
 import React from "react";
 import TopNav from "./top-nav";
 import Header from "./header";
+import Vet from "./vet"
+
 import Footer from "./footer";
 import "./app.css";
 
@@ -54,32 +56,35 @@ export class App extends React.Component {
   render() {
     return (
       <BrowserRouter>
-      <div className="app">
-        <TopNav />
-        <Header />
-        <section>
-          <h3>Make an Informed Decision</h3>
-          <p>
-            Pet Doc Finder shows you veterinians located around you or around a
-            location of your choice. Compare reviews and prices, so that you can
-            choose which one will be the best to take care of your loved one.
-          </p>
-        </section>
-        <section>
-          <h3>Help Others Make an Informed Decision</h3>
-          <p>
-            Help others who are looking for the best vet by adding the price of
-            services from the vet that you like.
-          </p>
-        </section>
-        <section>
-          <Route exact path="/" component={LandingPage} />
-          <Route exact path="/dashboard" component={Dashboard} />
-          <Route exact path="/register" component={RegistrationPage} />
-        </section>
-
-        <Footer />
-      </div>
+        <div className="app">
+          <TopNav />
+          <Header />
+          <section>
+            <h3>Make an Informed Decision</h3>
+            <p>
+              Pet Doc Finder shows you veterinians located around you or around
+              a location of your choice. Compare reviews and prices, so that you
+              can choose which one will be the best to take care of your loved
+              one.
+            </p>
+          </section>
+          <section>
+            <h3>Help Others Make an Informed Decision</h3>
+            <p>
+              Help others who are looking for the best vet by adding the price
+              of services from the vet that you like.
+            </p>
+          </section>
+          <section>
+            <Route exact path="/" component={LandingPage} />
+            <Route exact path="/dashboard" component={Dashboard} />
+            <Route exact path="/register" component={RegistrationPage} />
+          </section>
+          <div>
+            <Vet />
+          </div>
+          <Footer />
+        </div>
       </BrowserRouter>
     );
   }

@@ -3,6 +3,8 @@ import {connect} from 'react-redux';
 import {Redirect} from 'react-router-dom';
 import {fetchProtectedData} from '../actions/protected-data';
 import GoogleMap from "./googlemap";
+// import Services from "./services";
+
 
 export class Dashboard extends React.Component {
     componentDidMount() {
@@ -28,8 +30,9 @@ export class Dashboard extends React.Component {
                     Protected data: {this.props.protectedData}
                 </div>
                 <div>
-        <GoogleMap />
-      </div>
+                <GoogleMap />
+                </div>
+                
             </div>
         );
     }

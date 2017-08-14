@@ -99,7 +99,7 @@ function createMarkers(places) {
       position: place.geometry.location
     });
     console.log("PLACE: ", place)
-    placesList.innerHTML += "<li data-id='"+place.place_id+"'>" + place.name + " Rating: " +place.rating +"</li>";
+    placesList.innerHTML += "<li data-id='"+place.place_id+"'>" + place.name + " Rating: " +place.rating + "<a>"+"Check Prices"+"</a>"+"</li>";// use <Link>????
 
     bounds.extend(place.geometry.location);
   }
