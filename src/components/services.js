@@ -21,16 +21,15 @@ export function Service(props) {
 
 		return (
 			<li className="service">
-				<p>{props.service}</p>
-				<p>{props.price}</p>
+				<p>{props.service}: {props.price}</p>
 			</li>
 		);
 // 	}
 }
 
 Service.defaultProps = {
-    service: 'Service',
-    price: '$20.00'
+    service: '',
+    price: ''
 };
 
 export default connect()(Service);

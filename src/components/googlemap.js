@@ -12,44 +12,21 @@ import "./googlemap.css";
 //Documentation for map init and setup:
 //https://github.com/istarkov/google-map-react/blob/master/API.md
 export default class GoogleMap extends Component {
-  // static defaultProps = {
-  //   center: { lat: 59.95, lng: 30.33 },
-  //   zoom: 15
-  // };
 
   componentDidMount() {
-    //Documentation for geocode / places / etc
-    //https://www.npmjs.com/package/@google/maps
-    // var googleMapsClient = createClient({
-    //   key: API_KEY
-    // });
-    // // Geocode an address.
-    // googleMapsClient.geocode(
-    //   {
-    //     address: "1600 Amphitheatre Parkway, Mountain View, CA"
-    //   },
-    //   function(err, response) {
-    //     if (!err) {
-    //       console.log(response.json.results);
-    //     }
-    //   }
-    // );
+
   }
 
   render() {
     return (
-      <div className="map" style={{ width: "60%", height: "40vh", margin: "100px auto" }}>
-        {/*<GoogleMapReact
-          center={{ lat: 29.7604, lng: -95.3698 }}
-          defaultZoom={this.props.zoom}
-          bootstrapURLKeys={{ key: API_KEY }}
-        >
-          <AnyReactComponent
-            lat={29.7604}
-            lng={-95.3698}
-            text={"Houston, TX"}
-          />
-        </GoogleMapReact>*/}
+      <div>
+      <div id="map"></div>
+      <input id="pac-input" className="controls" type="text" placeholder="Search Box" />
+      <div id="panel">
+        <h2>Results</h2>
+        <ul id="places"></ul>
+        <button id="more">More results</button>
+      </div>
       </div>
     );
   }

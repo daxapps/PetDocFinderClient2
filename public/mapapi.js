@@ -12,7 +12,7 @@ function initMap() {
     zoom: 12
   });
 
-// HTML5 geolocation.
+  // HTML5 geolocation.
   infoWindow = new google.maps.InfoWindow();
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(
@@ -28,15 +28,14 @@ function initMap() {
         map.setCenter(pos);
 
         var service = new google.maps.places.PlacesService(map);
-  service.nearbySearch(
-    {
-      location: pos,
-      radius: 10000,
-      type: ["veterinary_care"]
-    },
-    processResults
-  );
-
+        service.nearbySearch(
+          {
+            location: pos,
+            radius: 10000,
+            type: ["veterinary_care"]
+          },
+          processResults
+        );
       },
       function() {
         handleLocationError(true, infoWindow, map.getCenter());
@@ -56,8 +55,6 @@ function initMap() {
     );
     infoWindow.open(map);
   }
-
-  
 }
 
 function processResults(results, status, pagination) {
@@ -98,32 +95,43 @@ function createMarkers(places) {
       title: place.name,
       position: place.geometry.location
     });
-    console.log("PLACE: ", place)
-    placesList.innerHTML += "<li data-id='"+place.place_id+"'>" + place.name + " Rating: " +place.rating + "<a>"+"Check Prices"+"</a>"+"</li>";// use <Link>????
+    console.log("PLACE: ", place);
+    placesList.innerHTML +=
+      "<li data-id='" +
+      place.place_id +
+      "'>" +
+      place.name +
+      " Rating: " +
+      place.rating +
+      "<a>" +
+      "Check Prices" +
+      "</a>" +
+      "</li>"; // use <Link>????
 
     bounds.extend(place.geometry.location);
   }
   map.fitBounds(bounds);
 
-  $("#places").on('click', 'li', function(e){
-  let currentPlace = {
-    vetName: $(this).text(),
-    googleDataId: $(this).attr('data-id')
-  }
-  console.log('CURRENT: ',currentPlace)
+  $("#places").on("click", "li", function(e) {
+    let currentPlace = {
+      vetName: $(this).text(),
+      googleDataId: $(this).attr("data-id")
+    };
+    console.log("CURRENT: ", currentPlace);
 
-  $.ajax({
-    url: 'http://localhost:8080/api/vets/vetlist',
-    data: currentPlace,
-    method: 'POST'
-  })
-  .done(function(data){
-    console.log('need to open dropdown with data', data)
-  })
-
-
-  console.log('CURRENT2: ',currentPlace)
-})
+    $.ajax({
+      url: "http://localhost:8080/api/vets/vetlist",
+      data: currentPlace,
+      method: "POST"
+    }).done(function(data) {
+      $.get('http://localhost:8080/api/vets/vetlist/59941b6a0a3878124e351bf7')
+      .done(function(data){
+      console.log("need to open dropdown with data", data);
+      
+      })
+    });
+    console.log("CURRENT2: ", currentPlace);
+  });
 }
 google.maps.event.addDomListener(window, "load", initMap);
 
