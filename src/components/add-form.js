@@ -15,6 +15,7 @@ export default class AddForm extends React.Component {
   onSubmit(event) {
     event.preventDefault();
     const serviceText = this.serviceInput.value.trim();
+    const priceText = this.priceInput.value.trim();
 
     if (serviceText && this.props.onAdd) {
       this.props.onAdd(this.serviceInput.value, this.priceInput.value);

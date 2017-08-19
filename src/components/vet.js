@@ -11,8 +11,8 @@ import AddForm from "./add-form";
 // console.log('GETSTATE2: ', store.getState());
 
 export class Vet extends React.Component {
-	addService(service, price) {
-		this.props.dispatch(addService(service, price));
+	addService(vetId, service, price) {
+		this.props.dispatch(addService(vetId, service, price));
 	}
 
 	render() {
@@ -26,7 +26,7 @@ export class Vet extends React.Component {
 				<div className="services">
 					<AddForm
 						type="service"
-						onAdd={(service, price) => this.addService(service, price)}
+						onAdd={(vetId, service, price) => this.addService(vetId, service, price)}
 					/>
 					{/* use Redux Form??? */}
 				</div>

@@ -24,7 +24,9 @@ export default class GoogleMap extends Component {
       <input id="pac-input" className="controls" type="text" placeholder="Search Box" />
       <div id="panel">
         <h2>Results</h2>
-        <ul id="places"></ul>
+        <ul id="places">
+
+        </ul>
         <button id="more">More results</button>
       </div>
       </div>

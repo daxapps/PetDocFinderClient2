@@ -20,9 +20,9 @@ export function Service(props) {
 // 		);
 
 		return (
-			<li className="service">
-				<p>{props.service}: {props.price}</p>
-			</li>
+			<div>
+				<p className="service" id="service">{props.service}: {props.price}</p>
+			</div>
 		);
 // 	}
 }

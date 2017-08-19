@@ -1,4 +1,5 @@
-import { ADD_SERVICE } from "../actions/services";
+// import { ADD_SERVICE } from "../actions/services";
+import { addService } from "../actions/services";
 
 const initialState = {
 	services: [{
@@ -18,7 +19,7 @@ const initialState = {
 
 export default function(state = initialState, action) {
 	switch (action.type) {
-		case ADD_SERVICE:
+		case addService:
 			return Object.assign({}, state, {
 				services: [
 					...state.services,

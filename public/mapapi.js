@@ -79,6 +79,7 @@ function processResults(results, status, pagination) {
 function createMarkers(places) {
   var bounds = new google.maps.LatLngBounds();
   var placesList = document.getElementById("places");
+  // var serviceList = document.getElementById("service");
 
   for (var i = 0, place; (place = places[i]); i++) {
     var image = {
@@ -99,14 +100,12 @@ function createMarkers(places) {
     placesList.innerHTML +=
       "<li data-id='" +
       place.place_id +
-      "'>" +
+      "'>" + '<a class="dropdown-toggle" data-toggle="dropdown">' +
       place.name +
       " Rating: " +
       place.rating +
-      "<a>" +
-      "Check Prices" +
       "</a>" +
-      "</li>"; // use <Link>????
+      "</li>"; 
 
     bounds.extend(place.geometry.location);
   }
@@ -124,10 +123,13 @@ function createMarkers(places) {
       data: currentPlace,
       method: "POST"
     }).done(function(data) {
-      $.get('http://localhost:8080/api/vets/vetlist/59941b6a0a3878124e351bf7')
+    console.log("DATA: ", data);
+
+      $.get(`http://localhost:8080/api/vets/vetlist/${data._id}`)
       .done(function(data){
       console.log("need to open dropdown with data", data);
       
+      $('#places').html("<li>" + data.service + data.price + "</li>")
       })
     });
     console.log("CURRENT2: ", currentPlace);
