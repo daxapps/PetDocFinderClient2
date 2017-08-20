@@ -1,4 +1,6 @@
 import React from "react";
+import {Link} from 'react-router-dom';
+
 
 import "./add-form.css";
 
@@ -15,7 +17,7 @@ export default class AddForm extends React.Component {
   onSubmit(event) {
     event.preventDefault();
     const serviceText = this.serviceInput.value.trim();
-    const priceText = this.priceInput.value.trim();
+    // const priceText = this.priceInput.value.trim();
 
     if (serviceText && this.props.onAdd) {
       this.props.onAdd(this.serviceInput.value, this.priceInput.value);
@@ -35,9 +37,9 @@ export default class AddForm extends React.Component {
     if (!this.state.editing) {
       return (
         <div className="add-button" onClick={() => this.setEditing(true)}>
-          <a href="#">
+          <Link to="/">
             Add a {this.props.type}...
-          </a>
+          </Link>
         </div>
       );
     }
