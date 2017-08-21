@@ -100,12 +100,15 @@ function createMarkers(places) {
     placesList.innerHTML +=
       "<li data-id='" +
       place.place_id +
-      "'>" + '<a class="dropdown-toggle" data-toggle="dropdown">' +
+      "'>" +
+      '<a class="dropdown-toggle" data-toggle="dropdown">' +
+      place.id +
+      " : " +
       place.name +
       " Rating: " +
       place.rating +
       "</a>" +
-      "</li>"; 
+      "</li>";
 
     bounds.extend(place.geometry.location);
   }
@@ -113,6 +116,7 @@ function createMarkers(places) {
 
   $("#places").on("click", "li", function(e) {
     let currentPlace = {
+      vetId: $(this).text(),
       vetName: $(this).text(),
       googleDataId: $(this).attr("data-id")
     };
@@ -123,14 +127,15 @@ function createMarkers(places) {
       data: currentPlace,
       method: "POST"
     }).done(function(data) {
-    console.log("DATA: ", data);
+      console.log("DATA: ", data);
 
-      $.get(`http://localhost:8080/api/vets/vetlist/${data._id}`)
-      .done(function(data){
-      console.log("need to open dropdown with data", data);
-      
-      $('#places').html("<li>" + data.service + data.price + "</li>")
-      })
+      $.get(`http://localhost:8080/api/vets/vetlist/${data._id}`).done(function(
+        data
+      ) {
+        console.log("need to open dropdown with data", data);
+        $('.vet .services').attr('vetId', data._id)
+        $("#places").html("<li>" + data.service + data.price + "</li>");
+      });
     });
     console.log("CURRENT2: ", currentPlace);
   });

@@ -1,5 +1,6 @@
 // import axios from "axios";
 import { API_BASE_URL } from "../config";
+// import { VET_ID } from ".../public/mapapi";
 
 // export const ADD_SERVICE = "ADD_SERVICE";
 // export const addService = (service, price) => ({
@@ -8,14 +9,16 @@ import { API_BASE_URL } from "../config";
 // 	price
 // });
 
-// How to populate :id with ???
 export const addService = (service, price) => dispatch => {
-	return fetch(`${API_BASE_URL}/vets/598eeecec7367abacc1a3ea1/services`, {
+	var vetId = document.querySelectorAll('.vet .services')[0].getAttribute('vetId')
+	var d = {service, price}
+	console.log('D: ', d)
+	return fetch(`${API_BASE_URL}/vets/${vetId}/services`, {
 		method: "POST",
 		headers: {
-			"content-type": "application/json"
+			"Content-Type": "application/json"
 		},
-		data: JSON.stringify(service)
+		body: d
 	}).then(res => res.json());
 };
 
