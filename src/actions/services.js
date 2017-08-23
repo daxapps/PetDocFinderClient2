@@ -30,15 +30,25 @@ export const addService = (service, price) => dispatch => {
 // 	price
 // });
 
-// export const fetchService = () => dispatch => {
-// 	fetch(`${API_BASE_URL}/vets/vetlist/:id`)
+// export const fetchService = (service, price) => dispatch => {
+// 	var vetId = document.querySelectorAll('.vet .services')[0].getAttribute('vetId')
+// 	var d = {service, price}
+// 	d = JSON.stringify(d)
+// 	return fetch(`${API_BASE_URL}/vets/vetlist/${vetId}`, {
+// 		method: "GET",
+// 		headers: {
+// 			"Content-Type": "application/json"
+// 		},
+// 		body: d
+
+// 	})
 // 		.then(res => {
 // 			if (!res.ok) {
 // 				return Promise.reject(res.statusText);
 // 			}
 // 			return res.json();
 // 		})
-// 		.then((service, price) => {
-// 			dispatch(fetchServiceSuccess(service, price));
-// 		});
+// 		// .then((service, price) => {
+// 		// 	dispatch(fetchServiceSuccess(service, price));
+// 		// });
 // };
