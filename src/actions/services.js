@@ -12,6 +12,7 @@ import { API_BASE_URL } from "../config";
 export const addService = (service, price) => dispatch => {
 	var vetId = document.querySelectorAll('.vet .services')[0].getAttribute('vetId')
 	var d = {service, price}
+	d = JSON.stringify(d)
 	console.log('D: ', d)
 	return fetch(`${API_BASE_URL}/vets/${vetId}/services`, {
 		method: "POST",

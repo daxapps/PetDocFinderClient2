@@ -23,7 +23,6 @@ export default class AddForm extends React.Component {
       this.props.onAdd(this.serviceInput.value, this.priceInput.value);
     }
     this.serviceInput.value = "";
-
     this.priceInput.value = "";
   }
 

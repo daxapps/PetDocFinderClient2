@@ -1,7 +1,7 @@
 import React from "react";
 import TopNav from "./top-nav";
 import Header from "./header";
-import Vet from "./vet"
+import Vet from "./vet";
 import GoogleMap from "./googlemap";
 
 import Footer from "./footer";
@@ -84,9 +84,7 @@ export class App extends React.Component {
             <Route exact path="/api/vets/:id/services" component={Services} />
           </section>
           <div>
-          <GoogleMap />
-          </div>
-          <div>
+            <GoogleMap />
             <Vet />
           </div>
           <Footer />

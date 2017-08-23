@@ -101,9 +101,7 @@ function createMarkers(places) {
       "<li data-id='" +
       place.place_id +
       "'>" +
-      '<a class="dropdown-toggle" data-toggle="dropdown">' +
-      place.id +
-      " : " +
+      '<a>' +
       place.name +
       " Rating: " +
       place.rating +
@@ -116,7 +114,7 @@ function createMarkers(places) {
 
   $("#places").on("click", "li", function(e) {
     let currentPlace = {
-      vetId: $(this).text(),
+      // vetId: $(this).text(),
       vetName: $(this).text(),
       googleDataId: $(this).attr("data-id")
     };
@@ -134,7 +132,8 @@ function createMarkers(places) {
       ) {
         console.log("need to open dropdown with data", data);
         $('.vet .services').attr('vetId', data._id)
-        $("#places").html("<li>" + data.service + data.price + "</li>");
+        $('.vet').toggle();
+        $("#service").html("<li>" + data.service + data.price + "</li>");
       });
     });
     console.log("CURRENT2: ", currentPlace);

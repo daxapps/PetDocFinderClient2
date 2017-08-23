@@ -1,11 +1,11 @@
 section {
   height: 100vh;
-  background-color: #f3c2a4;
+  /*background-color: #f3c2a4;*/
   text-align: center;
 }
 
 section:nth-child(odd) {
-  background: #0ddfff;
+  /*background: #0ddfff;*/
 }
 
 h3 {
