@@ -6,7 +6,13 @@ var map, infoWindow;
 
 function initMap() {
   var houston = { lat: 29.7604, lng: -95.3698 };
-  var mapDiv = document.getElementById('map');
+  var mapDiv = document.getElementById("map");
+
+  if (!mapDiv) {
+    setTimeout(initMap, 500);
+    return false;
+  }
+
   map = new google.maps.Map(mapDiv, {
     center: houston,
     zoom: 12
@@ -143,7 +149,14 @@ function createMarkers(places) {
     console.log("CURRENT2: ", currentPlace);
   });
 }
-google.maps.event.addDomListener(window, "load", initMap);
+
+function googleCheck() {
+  if (!google) {
+    setTimeout(googleCheck, 500);
+    return false;
+  }
+  google.maps.event.addDomListener(window, "load", initMap);
+}
 
 // TODO: move to reducer
 // console.log('jQuery: ', jQuery)
