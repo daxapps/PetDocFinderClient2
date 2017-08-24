@@ -1,19 +1,12 @@
-import React, { Component } from "react";
-// import GoogleMapReact from "google-map-react";
-// import { createClient } from "@google/maps";
+import React from "react";
+
 import "./googlemap.css";
 // import Vet from "./vet"
 
 
-// const API_KEY = "AIzaSyDFjGgNQtuiSuFvfXvs84TS1lY_ZtqYXYc";
-// const AnyReactComponent = ({ text }) =>
-//   <div>
-//     {text}
-//   </div>;
-
 //Documentation for map init and setup:
 //https://github.com/istarkov/google-map-react/blob/master/API.md
-export default class GoogleMap extends Component {
+export default class GoogleMap extends React.Component {
 
   componentDidMount() {
     // new google.maps.Map(this.refs.map, {

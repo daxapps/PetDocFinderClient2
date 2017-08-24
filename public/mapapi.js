@@ -6,8 +6,8 @@ var map, infoWindow;
 
 function initMap() {
   var houston = { lat: 29.7604, lng: -95.3698 };
-
-  map = new google.maps.Map(document.getElementById("map"), {
+  var mapDiv = document.getElementById('map');
+  map = new google.maps.Map(mapDiv, {
     center: houston,
     zoom: 12
   });
@@ -134,7 +134,8 @@ function createMarkers(places) {
         $(".vet").toggle();
         var services = "";
         data.servicesRef.forEach(function(service) {
-          services += "<li>" + service.service + " : " + service.price + "</li>"
+          services +=
+            "<li>" + service.service + " : " + service.price + "</li>";
         });
         $("#service").html(services);
       });
