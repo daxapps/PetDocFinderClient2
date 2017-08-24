@@ -17,7 +17,7 @@ export class RegistrationForm extends React.Component {
   render() {
     return (
       <form
-        className="login-form"
+        className="login-form form-group"
         onSubmit={this.props.handleSubmit(values => this.onSubmit(values))}
       >
         <label htmlFor="firstName">First name</label>
@@ -36,7 +36,7 @@ export class RegistrationForm extends React.Component {
           component={Input}
           type="password"
           name="password"
-          validate={[required, length({ min: 10, max: 72 }), isTrimmed]}
+          validate={[required, length({ min: 8, max: 72 }), isTrimmed]}
         />
         <label htmlFor="passwordConfirm">Confirm password</label>
         <Field

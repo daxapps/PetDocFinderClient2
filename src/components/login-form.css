@@ -1,12 +1,18 @@
 .login-form {
-	border: 2px solid lightgray;
+	/*border: 2px solid lightgray;*/
 	max-width: 50%;
 	margin: 0 auto;
 	text-align: center;
 }
 
-/*input {
-	display: block;
-	margin: 10px auto;
+label {
+	/*display: block;*/
+	/*margin: 0 auto;*/
+	/*height: 1em;*/
+}
+
+/*.form-input {
+	height: 26px;
 }*/
+
 
