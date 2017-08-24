@@ -24,7 +24,7 @@ export default function(state = initialState, action) {
 
 	// switch (action.type) {
 		// case FETCH_SERVICE_SUCCESS:
-		// 	return action.
+		// 	return action.service
 		// 	});
 
 	// switch (action.type) {

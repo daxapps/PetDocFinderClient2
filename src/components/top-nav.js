@@ -9,7 +9,7 @@ import "./top-nav.css";
 
 export default function TopNav() {
 	return (
-		<nav className="navbar navbar-default navbar-fixed-top">
+		<nav className="navbar navbar-default navbar-fixed-top navbar-collapse">
 			<div className="navbar-header" />
 
 			<ul className="nav navbar-nav navbar-left">
