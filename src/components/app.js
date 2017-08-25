@@ -63,10 +63,10 @@ export class App extends React.Component {
 
           <Route exact path="/dashboard" component={Dashboard} />
           <Route exact path="/register" component={RegistrationPage} />
-          <div>
+          {/*<div>
             <GoogleMap />
             <Vet />
-          </div>
+          </div>*/}
           <Footer />
         </div>
       </BrowserRouter>

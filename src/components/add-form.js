@@ -36,7 +36,7 @@ export default class AddForm extends React.Component {
     if (!this.state.editing) {
       return (
         <div className="add-button" onClick={() => this.setEditing(true)}>
-          <Link to="/">
+          <Link to="/dashboard">
             Add a {this.props.type}...
           </Link>
         </div>

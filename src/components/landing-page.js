@@ -32,7 +32,7 @@ export function LandingPage(props) {
       <section>
         <h2>Welcome to Pet Doc Finder</h2>
         <LoginForm />
-        {/*<Link to="/register">Register</Link>*/}
+        <Link to="/register">Register</Link>
       </section>
     </div>
   );

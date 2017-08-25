@@ -1,17 +1,23 @@
-// import React from "react";
+import React from "react";
+import VetListItem from "./vetlist-item";
 
-// export class VetList extends React.Component {
-// 	render() {
-// 		return (
-// 			<div id="panel">
-// 				<h2>Results</h2>
-// 				<ul id="places">
-// 					<li data-id="place.place_id"><a>place.name Rating: place.rating</a></li>
-// 				</ul>
-// 				<button id="more">More results</button>
-// 			</div>
-// 		);
-// 	}
-// }
+class VetList extends React.Component {
+	render() {
 
-// export default VetList;
+		const vetItems = this.props.vets.map((item, index) =>{
+			return <VetListItem key={index} {...item}/>
+		})
+
+		return (
+			<div id="panel">
+				<h2>Results</h2>
+				<ul id="places">
+					{vetItems}
+				</ul>
+				<button id="more">More results</button>
+			</div>
+		);
+	}
+}
+
+export default VetList;

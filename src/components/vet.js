@@ -12,6 +12,7 @@ import AddForm from "./add-form";
 
 export class Vet extends React.Component {
 	addService(vetId, service, price) {
+		console.log('CALLED?')
 		this.props.dispatch(addService(vetId, service, price));
 	}
 

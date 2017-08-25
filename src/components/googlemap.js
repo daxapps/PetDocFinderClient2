@@ -15,6 +15,11 @@ export default class GoogleMap extends React.Component {
   }
 
   render() {
+    const tmpvets = [
+      { pid: "123", name: "Bob's Vet", rating: "3.8 stars" },
+      { pid: "123", name: "Bob's Vet", rating: "3.8 stars" },
+      { pid: "123", name: "Bob's Vet", rating: "3.8 stars" }
+    ];
     return (
       <div>
         {/* return <div ref="map" />*/}
@@ -30,7 +35,7 @@ export default class GoogleMap extends React.Component {
           <ul id="places" />
           <button id="more">More results</button>
         </div>
-        {/*<VetList />*/}
+        <VetList vets={tmpvets} />
       </div>
     );
   }
