@@ -135,7 +135,6 @@ function createMarkers(places) {
       $.get(`http://localhost:8080/api/vets/vetlist/${data._id}`).done(function(
         data
       ) {
-        console.log("need to open dropdown with data", data.servicesRef);
         $(".vet .services").attr("vetId", data._id);
         $(".vet").toggle();
         var services = "";
