@@ -5,10 +5,8 @@ import "./vet.css";
 import { addService } from "../actions/services";
 import Service from "./services";
 import AddForm from "./add-form";
+// import { bindActionCreators } from 'redux';
 
-// console.log('GETSTATE: ', store.getState());
-// store.dispatch(addService('Trim Nails', "$25.00"));
-// console.log('GETSTATE2: ', store.getState());
 
 export class Vet extends React.Component {
 	addService(vetId, service, price) {
@@ -29,7 +27,6 @@ export class Vet extends React.Component {
 						type="service"
 						onAdd={(vetId, service, price) => this.addService(vetId, service, price)}
 					/>
-					{/* use Redux Form??? */}
 				</div>
 				<ul>
 					{services}
@@ -42,5 +39,7 @@ export class Vet extends React.Component {
 const mapStateToProps = (state, props) => ({
 	services: state.services
 });
+
+
 
 export default connect(mapStateToProps)(Vet);

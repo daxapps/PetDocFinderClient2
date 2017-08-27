@@ -8,9 +8,6 @@ import TopNav from "./top-nav";
 import LandingPage from "./landing-page";
 import Dashboard from "./dashboard";
 import RegistrationPage from "./registration-page";
-import GoogleMap from "./googlemap";
-
-import Vet from "./vet";
 import Footer from "./footer";
 
 
@@ -63,10 +60,6 @@ export class App extends React.Component {
 
           <Route exact path="/dashboard" component={Dashboard} />
           <Route exact path="/register" component={RegistrationPage} />
-          {/*<div>
-            <GoogleMap />
-            <Vet />
-          </div>*/}
           <Footer />
         </div>
       </BrowserRouter>
