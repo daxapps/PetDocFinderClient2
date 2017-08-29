@@ -20,6 +20,9 @@ export class Dashboard extends React.Component {
       return <Redirect to="/" />;
     }
 
+    const styleSheet = (this.props.showAddService) ? 'block' : 'none'
+    console.log('PROPS: ', this.props.showAddService)
+
     return (
       <div className="dashboard">
         <div className="dashboard-username">
@@ -32,8 +35,12 @@ export class Dashboard extends React.Component {
           Protected data: {this.props.protectedData}
         </div>
         <div>
+        <div>
           <GoogleMap />
-          <Vet />
+         </div> 
+         <div style={{display:styleSheet}}>
+          <Vet/>
+          </div>
         </div>
       </div>
     );
@@ -46,7 +53,8 @@ const mapStateToProps = state => {
     loggedIn: currentUser !== null,
     username: currentUser ? state.auth.currentUser.username : "",
     name: currentUser ? `${currentUser.firstName} ${currentUser.lastName}` : "",
-    protectedData: state.protectedData.data
+    protectedData: state.protectedData.data,
+    showAddService: state.vet.showAddService
   };
 };
 

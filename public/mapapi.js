@@ -85,11 +85,9 @@ function processResults(results, status, pagination) {
 function createMarkers(places) {
   var bounds = new google.maps.LatLngBounds();
   var placesList = document.getElementById("places");
-  // var serviceList = document.getElementById("service");
 
   for (var i = 0, place; (place = places[i]); i++) {
     var image = {
-      // url: place.icon,
       size: new google.maps.Size(71, 71),
       origin: new google.maps.Point(0, 0),
       anchor: new google.maps.Point(17, 34),
@@ -98,7 +96,6 @@ function createMarkers(places) {
 
     var marker = new google.maps.Marker({
       map: map,
-      // icon: image,
       title: place.name,
       position: place.geometry.location
     });

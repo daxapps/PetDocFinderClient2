@@ -1,18 +1,35 @@
 import React from "react";
-
+/*global google*/
 import "./googlemap.css";
 import VetList from "./vet-list";
 
 export default class GoogleMap extends React.Component {
-  componentDidMount() {
-    // new google.maps.Map(this.refs.map, {
-    //   zoom: 12,
-    //   center: {
-    //     lat: 29.7604,
-    //     lng: -95.3698
-    //   }
-    // });
-  }
+  // componentWillReceiveProps(nextProps) {
+  //   this.map.panTo({ lat: nextProps.lat, lng: nextProps.lng });
+
+  //   var infowindow = new google.maps.InfoWindow({
+  //     content: nextProps.content
+  //   });
+
+  //   var pos = { lat: nextProps.lat, lng: nextProps.lng };
+  //   var marker = new google.maps.Marker({
+  //     position: pos,
+  //     map: this.map
+  //   });
+  //   marker.addListener("click", function() {
+  //     infowindow.open(this.map, marker);
+  //   });
+  // }
+
+  // componentDidMount() {
+  //   this.map = new google.maps.Map(this.refs.map, {
+  //     center: {
+  //       lat: this.props.lat,
+  //       lng: this.props.lng
+  //     },
+  //     zoom: 12
+  //   });
+  // }
 
   render() {
     const tmpvets = [
@@ -22,8 +39,7 @@ export default class GoogleMap extends React.Component {
     ];
     return (
       <div>
-        {/* return <div ref="map" />*/}
-        <div id="map" />
+        <div id="map" ref='map'/>
         <input
           id="pac-input"
           className="controls"

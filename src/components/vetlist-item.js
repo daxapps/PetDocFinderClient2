@@ -1,34 +1,35 @@
 import React from "react";
 import { connect } from "react-redux";
-import { bindActionCreators } from 'redux';
-import { showAddService } from "../actions/vet";
+// import { bindActionCreators } from 'redux';
+import { showAddServiceAction } from "../actions/vet";
 // import Vet from "./vet";
 
 class VetListItem extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {
-			showAddService: false
-		};
-	}
-//dispatch action
-// how to change to true??? and call vet.js??
-	onClick() {
-		this.setState({ showAddService: !this.state.showAddService });
+		// this.state = {
+		// 	showAddService: false
+		// };
 	}
 
 	render() {
 		return (
 			<li 
-				onClick={this.onClick.bind(this)}
-				// onClick={() => this.props.showAddService(addServiceBtn)}
+				onClick={this.props.showAddServiceComponent}
+				// onClick={() => this.state.showAddService}
 				data-id={this.props.pid}>{this.props.name} Rating: {this.props.rating}</li>
 			)
 	}
 }
 
-function mapDispatchToProps(dispatch){
-	return bindActionCreators({showAddService: showAddService}, dispatch)
+function mapStateToProps(state){
+	return {}
 }
 
-export default connect(mapDispatchToProps)(VetListItem);
+function mapDispatchToProps(dispatch){
+	return { showAddServiceComponent: () => {
+		dispatch(showAddServiceAction())
+	}}
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(VetListItem);
