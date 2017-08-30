@@ -14,12 +14,13 @@ const initialState = {
 export default function(state = initialState, action) {
 	switch (action.type) {
 		case ADD_SERVICE:
+		console.log('ACTION: ', action)
 			return Object.assign({}, state, {
 				services: [
 					...state.services,
 					{
-						service: action.service,
-						price: action.price
+						service: action.payload.service,
+						price: action.payload.price
 					}
 				]
 			});

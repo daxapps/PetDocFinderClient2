@@ -14,7 +14,7 @@ export class Vet extends React.Component {
 
 	addService(service, price) {
 		console.log('PROPSSERVICE: ', this.props.showAddService)
-		this.props.dispatch(addService(service, price, this.props.showAddService));
+		addService(service, price, this.props.showAddService, this.props.dispatch);
 	}
 
 	render() {

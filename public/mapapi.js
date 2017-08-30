@@ -67,6 +67,7 @@ function processResults(results, status, pagination) {
   if (status !== google.maps.places.PlacesServiceStatus.OK) {
     return;
   } else {
+    // set window obj here
     createMarkers(results);
 
     if (pagination.hasNextPage) {
