@@ -21,7 +21,7 @@ export class Dashboard extends React.Component {
     }
 
     const styleSheet = (this.props.showAddService) ? 'block' : 'none'
-    console.log('PROPS: ', this.props.showAddService)
+    console.log('PROPS_SHOWAS: ', this.props.showAddService)
 
     return (
       <div className="dashboard">

@@ -9,9 +9,9 @@ import { API_BASE_URL } from "../config";
 // 	price
 // });
 
-export const addService = (service, price) => dispatch => {
-	var vetId = document.querySelectorAll('.vet .services')[0].getAttribute('vetId')
-	var d = {service, price}
+export const addService = (service, price, vetId) => dispatch => {
+	// var vetId = document.querySelectorAll('.vet .services')[0].getAttribute('data-id')
+	var d = {service, price, vetId}
 	d = JSON.stringify(d)
 	console.log('D: ', d)
 	return fetch(`${API_BASE_URL}/vets/${vetId}/services`, {
@@ -34,7 +34,7 @@ export const addService = (service, price) => dispatch => {
 // 	var vetId = document.querySelectorAll('.vet .services')[0].getAttribute('vetId')
 // 	var d = {service, price}
 // 	d = JSON.stringify(d)
-// 	return fetch(`${API_BASE_URL}/vets/vetlist/${vetId}`, {
+// 	return fetch(`${API_BASE_URL}/vets/vetlist/${id}`, {
 // 		method: "GET",
 // 		headers: {
 // 			"Content-Type": "application/json"
@@ -48,7 +48,7 @@ export const addService = (service, price) => dispatch => {
 // 			}
 // 			return res.json();
 // 		})
-// 		// .then((service, price) => {
-// 		// 	dispatch(fetchServiceSuccess(service, price));
-// 		// });
+// 		.then((service, price) => {
+// 			dispatch(fetchServiceSuccess(service, price));
+// 		});
 // };

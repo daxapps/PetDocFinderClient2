@@ -33,7 +33,7 @@ export default class GoogleMap extends React.Component {
 
   render() {
     const tmpvets = [
-      { pid: "123", name: "Bob's Vet", rating: "3.8 stars" },
+      { pid: "12354", name: "Bob's Vet", rating: "3.8 stars" },
       { pid: "123", name: "Bob's Vet", rating: "3.8 stars" },
       { pid: "123", name: "Bob's Vet", rating: "3.8 stars" }
     ];

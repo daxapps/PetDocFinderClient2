@@ -12,24 +12,46 @@ class VetListItem extends React.Component {
 		// };
 	}
 
+	// handleSubmit(e) {
+	// 	e.preventDefault();
+	// 	// var self = this;
+	// 	fetch("http://localhost:8080/api/vets/vetlist", {
+	// 		method: "POST",
+	// 		data: {
+	// 			vetName: this.text(),
+	// 			googleDataId: this.attr("data-id")
+	// 		}
+	// 	}).then(data => {
+	// 		console.log("NEWDATA: ", data);
+	// 		// return response.json();
+	// 	});
+	// 	// .then(function(body) {
+	// 	// 	console.log(body);
+	// 	// });
+	// }
+
 	render() {
 		return (
-			<li 
+			<li
 				onClick={this.props.showAddServiceComponent}
-				// onClick={() => this.state.showAddService}
-				data-id={this.props.pid}>{this.props.name} Rating: {this.props.rating}</li>
-			)
+				data-id={this.props.pid}
+			>
+				{this.props.name} Rating: {this.props.rating}
+			</li>
+		);
 	}
 }
 
-function mapStateToProps(state){
-	return {}
+function mapStateToProps(state) {
+	return {};
 }
 
-function mapDispatchToProps(dispatch){
-	return { showAddServiceComponent: () => {
-		dispatch(showAddServiceAction())
-	}}
+function mapDispatchToProps(dispatch) {
+	return {
+		showAddServiceComponent: (e) => {
+			dispatch(showAddServiceAction(e.currentTarget.getAttribute("data-id")));
+		}
+	};
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(VetListItem);

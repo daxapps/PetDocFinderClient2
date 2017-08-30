@@ -13,7 +13,7 @@ export default (state = initialState, action) => {
 		console.log('CHANGING:')
 			return { 
 				...state, 
-				showAddService: !state.showAddService 
+				showAddService: action.payload 
 			}
 
 		default:

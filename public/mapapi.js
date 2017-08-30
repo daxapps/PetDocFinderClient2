@@ -115,35 +115,35 @@ function createMarkers(places) {
   }
   map.fitBounds(bounds);
 
-  $("#places").on("click", "li", function(e) {
-    let currentPlace = {
-      vetName: $(this).text(),
-      googleDataId: $(this).attr("data-id")
-    };
-    console.log("CURRENT: ", currentPlace);
+  // $("#places").on("click", "li", function(e) {
+  //   let currentPlace = {
+  //     vetName: $(this).text(),
+  //     googleDataId: $(this).attr("data-id")
+  //   };
+  //   console.log("CURRENT: ", currentPlace);
 
-    $.ajax({
-      url: "http://localhost:8080/api/vets/vetlist",
-      data: currentPlace,
-      method: "POST"
-    }).done(function(data) {
-      console.log("DATA: ", data);
+  //   $.ajax({
+  //     url: "http://localhost:8080/api/vets/vetlist",
+  //     data: currentPlace,
+  //     method: "POST"
+  //   }).done(function(data) {
+  //     console.log("DATA: ", data);
 
-      $.get(`http://localhost:8080/api/vets/vetlist/${data._id}`).done(function(
-        data
-      ) {
-        $(".vet .services").attr("vetId", data._id);
-        $(".vet").toggle();
-        var services = "";
-        data.servicesRef.forEach(function(service) {
-          services +=
-            "<li>" + service.service + " : " + service.price + "</li>";
-        });
-        $("#service").html(services);
-      });
-    });
-    console.log("CURRENT2: ", currentPlace);
-  });
+  //     $.get(`http://localhost:8080/api/vets/vetlist/${data._id}`).done(function(
+  //       data
+  //     ) {
+  //       $(".vet .services").attr("vetId", data._id);
+  //       $(".vet").toggle();
+  //       var services = "";
+  //       data.servicesRef.forEach(function(service) {
+  //         services +=
+  //           "<li>" + service.service + " : " + service.price + "</li>";
+  //       });
+  //       $("#service").html(services);
+  //     });
+  //   });
+  //   console.log("CURRENT2: ", currentPlace);
+  // });
 }
 
 function googleCheck() {
