@@ -2,32 +2,15 @@ import React from "react";
 import { connect } from "react-redux";
 // import { bindActionCreators } from 'redux';
 import { showAddServiceAction } from "../actions/vet";
+import { fetchService } from "../actions/services";
 // import Vet from "./vet";
 
 class VetListItem extends React.Component {
-	constructor(props) {
-		super(props);
+	// constructor(props) {
+	// 	super(props);
 		// this.state = {
 		// 	showAddService: false
 		// };
-	}
-
-	// handleSubmit(e) {
-	// 	e.preventDefault();
-	// 	// var self = this;
-	// 	fetch("http://localhost:8080/api/vets/vetlist", {
-	// 		method: "POST",
-	// 		data: {
-	// 			vetName: this.text(),
-	// 			googleDataId: this.attr("data-id")
-	// 		}
-	// 	}).then(data => {
-	// 		console.log("NEWDATA: ", data);
-	// 		// return response.json();
-	// 	});
-	// 	// .then(function(body) {
-	// 	// 	console.log(body);
-	// 	// });
 	// }
 
 	render() {
@@ -49,7 +32,7 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
 	return {
 		showAddServiceComponent: (e) => {
-			dispatch(showAddServiceAction(e.currentTarget.getAttribute("data-id")));
+			showAddServiceAction(e.currentTarget.getAttribute("data-id"), dispatch)
 		}
 	};
 }
