@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 // import { bindActionCreators } from 'redux';
 import { showAddServiceAction } from "../actions/vet";
-import { fetchService } from "../actions/services";
+// import { fetchService } from "../actions/services";
 // import Vet from "./vet";
 
 class VetListItem extends React.Component {

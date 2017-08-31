@@ -1,4 +1,4 @@
-import { SHOW_ADD_SERVICE } from "../actions/vet";
+import { SHOW_ADD_SERVICE, GOOGLE_MAPS } from "../actions/vet";
 
 const initialState = {
 	showAddService: false
@@ -7,16 +7,36 @@ const initialState = {
 };
 
 export default (state = initialState, action) => {
-	// console.log('ACTION: ', action.addServiceBtn)
 	switch (action.type) {
 		case SHOW_ADD_SERVICE:
-		console.log('CHANGING:')
-			return { 
-				...state, 
-				showAddService: action.payload 
-			}
+			// console.log("CHANGING:");
+			return {
+				...state,
+				showAddService: action.payload
+			};
+
+		case GOOGLE_MAPS:
+			return {
+					...state,
+					googleMaps: action.payload
+				}
+			
 
 		default:
 			return state;
 	}
-}
+};
+
+// export (state = {}, action) => {
+// 	switch (action.type) {
+// 		case GOOGLE_MAPS:
+// 			return [
+// 				...state,
+// 				{
+// 					googleMaps: action.payload
+// 				}
+// 			];
+// 		default:
+// 			return state;
+// 	}
+// };

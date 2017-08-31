@@ -1,7 +1,8 @@
 import React from "react";
-/*global google*/
 import "./googlemap.css";
 import VetList from "./vet-list";
+// import { googleMaps } from "../actions/vet";
+
 
 export default class GoogleMap extends React.Component {
   // componentWillReceiveProps(nextProps) {
@@ -37,6 +38,10 @@ export default class GoogleMap extends React.Component {
       { pid: "59999e22d6976831e5d4cdbb", name: "Bob's Vet", rating: "3.8 stars" },
       { pid: "123", name: "Bob's Vet", rating: "3.8 stars" }
     ];
+
+    // const gVets = window.googleMapInfo
+    // console.log('GVets:', window.googleMapInfo[0])
+
     return (
       <div>
         <div id="map" ref='map'/>

@@ -20,16 +20,24 @@ export const showAddServiceAction = (action, dispatch) => {
 			}
 			return res.json();
 		})
-		.then((obj) => {
-			console.log('OBJ: ', obj)
+		.then(obj => {
+			console.log("OBJ: ", obj);
 			dispatch(fetchServiceSuccess(obj));
 		});
 };
 
 export const FETCH_SERVICE_SUCCESS = "FETCH_SERVICE_SUCCESS";
-export const fetchServiceSuccess = (obj) => ({
+export const fetchServiceSuccess = obj => ({
 	type: FETCH_SERVICE_SUCCESS,
 	payload: obj.servicesRef
 });
 
-// const boundShowAddService = index => dispatch(showAddService(index))
+export const GOOGLE_MAPS = "GOOGLE_MAPS";
+export const googleMaps = () => {
+	console.log('WINDOW: ', window.googleMapInfo)
+	return {
+		type: GOOGLE_MAPS,
+		payload: window.googleMapInfo
+	}
+		
+};

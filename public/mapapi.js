@@ -68,6 +68,8 @@ function processResults(results, status, pagination) {
     return;
   } else {
     // set window obj here
+    window.googleMapInfo = results
+    console.log('RESULTS:', googleMapInfo)
     createMarkers(results);
 
     if (pagination.hasNextPage) {
@@ -82,6 +84,11 @@ function processResults(results, status, pagination) {
     }
   }
 }
+
+// var googleBtn = document.getElementById("googleResults")
+// googleBtn.addEventListener("click", function() {
+
+//   })
 
 function createMarkers(places) {
   var bounds = new google.maps.LatLngBounds();
@@ -100,7 +107,7 @@ function createMarkers(places) {
       title: place.name,
       position: place.geometry.location
     });
-    console.log("PLACE: ", place);
+    // console.log("PLACE: ", place);
     placesList.innerHTML +=
       "<li data-id='" +
       place.place_id +

@@ -2,7 +2,7 @@ import React from "react";
 import {connect} from 'react-redux';
 // // import "./vet.css";
 // import store from '../store';
-import { addService, fetchServiceSuccess } from '../actions/services';
+// import { addService, fetchServiceSuccess } from '../actions/services';
 
 // console.log('GETSTATE: ', store.getState());
 // store.dispatch(addService('Trim Nails', "$25.00"));
