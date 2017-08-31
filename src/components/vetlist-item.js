@@ -33,7 +33,7 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
 	return {
 		showAddServiceComponent: (e) => {
-			showAddServiceAction(e.currentTarget.getAttribute("data-id"), e.currentTarget.getAttribute("data-id"), dispatch)
+			showAddServiceAction(e.currentTarget.getAttribute("data-id"), e.currentTarget.getAttribute("data-name"), dispatch)
 		}
 	};
 }

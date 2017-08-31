@@ -69,7 +69,8 @@ function processResults(results, status, pagination) {
   } else {
     // set window obj here
     window.googleMapInfo = results
-    console.log('RESULTS:', googleMapInfo)
+    // console.log('RESULTS:', googleMapInfo)
+    
     createMarkers(results);
 
     if (pagination.hasNextPage) {

@@ -14,7 +14,7 @@ class VetList extends React.Component {
 		return (
 			<div id="panel">
 				<h2>Results2</h2>
-				<ul id="places2">
+				<ul id="places">
 					{vetItems}
 				</ul>
 				<button id="more">More results</button>
