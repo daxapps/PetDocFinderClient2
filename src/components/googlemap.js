@@ -1,10 +1,12 @@
 import React from "react";
+import { connect } from "react-redux";
+
 import "./googlemap.css";
 import VetList from "./vet-list";
 // import { googleMaps } from "../actions/vet";
 
 
-export default class GoogleMap extends React.Component {
+class GoogleMap extends React.Component {
   // componentWillReceiveProps(nextProps) {
   //   this.map.panTo({ lat: nextProps.lat, lng: nextProps.lng });
 
@@ -32,15 +34,22 @@ export default class GoogleMap extends React.Component {
   //   });
   // }
 
-  render() {
-    const tmpvets = [
-      { pid: "599c58e9d6976831e5da26d0", name: "Bob's Vet", rating: "3.8 stars" },
-      { pid: "59999e22d6976831e5d4cdbb", name: "Bob's Vet", rating: "3.8 stars" },
-      { pid: "123", name: "Bob's Vet", rating: "3.8 stars" }
-    ];
+  // componentDidMount() {
+  //   console.log('gMAPS: ', this.props.googleMaps())
+  //   console.log('ACTIONS: ', this.props.actions)
+  // }
 
-    // const gVets = window.googleMapInfo
-    // console.log('GVets:', window.googleMapInfo[0])
+  render() {
+    // how to get window.gooogleMapInfo(GOOGLE_MAPS.payload value) here?????
+    // console.log('TEST: ', this.props.vetList)
+    // const tmpvets = [
+    //   { pid: "599c58e9d6976831e5da26d0", name: "Bob's Vet", rating: "3.8 stars" },
+    //   { pid: "59999e22d6976831e5d4cdbb", name: "Bob's Vet", rating: "3.8 stars" },
+    //   { pid: "123", name: "Bob's Vet", rating: "3.8 stars" }
+    // ];
+
+    // how to get window.gooogleMapInfo(GOOGLE_MAPS.payload value) here?????
+    // const googleInfo = 
 
     return (
       <div>
@@ -56,8 +65,18 @@ export default class GoogleMap extends React.Component {
           <ul id="places" />
           <button id="more">More results</button>
         </div>
-        <VetList vets={tmpvets} />
+        <VetList vets={this.props.vetList} />
       </div>
     );
   }
 }
+
+const mapStateToProps = (state, props) => {
+  return { vetList: state.vet.googleMaps }
+};
+
+const mapDispatchToProps = dispatch => {
+  return {}
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(GoogleMap)

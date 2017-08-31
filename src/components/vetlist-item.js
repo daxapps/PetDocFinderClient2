@@ -17,9 +17,10 @@ class VetListItem extends React.Component {
 		return (
 			<li
 				onClick={this.props.showAddServiceComponent}
-				data-id={this.props.pid}
+				data-id={this.props.place_id}
+				data-name={this.props.name}
 			>
-				{this.props.name} Rating: {this.props.rating}
+				{this.props.name} Rating2: {this.props.rating}
 			</li>
 		);
 	}
@@ -32,7 +33,7 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
 	return {
 		showAddServiceComponent: (e) => {
-			showAddServiceAction(e.currentTarget.getAttribute("data-id"), dispatch)
+			showAddServiceAction(e.currentTarget.getAttribute("data-id"), e.currentTarget.getAttribute("data-id"), dispatch)
 		}
 	};
 }

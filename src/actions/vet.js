@@ -1,17 +1,18 @@
 import { API_BASE_URL } from "../config";
 
 export const SHOW_ADD_SERVICE = "SHOW_ADD_SERVICE";
-export const showAddServiceAction = (action, dispatch) => {
+export const showAddServiceAction = (googleId, vetName, dispatch) => {
 	dispatch({
 		type: SHOW_ADD_SERVICE,
-		payload: action
+		payload: googleId
 	});
 
 	var vetHeaders = new Headers();
 
-	return fetch(`${API_BASE_URL}/vets/vetlist/${action}`, {
-		method: "GET",
-		headers: vetHeaders
+	return fetch(`${API_BASE_URL}/vets/vetlist/`, {
+		method: "POST",
+		headers: vetHeaders,
+		body: JSON.stringify({ googleDataId: googleId, vetName })
 	})
 		.then(res => {
 			// console.log("RES: ", res.json());
@@ -34,10 +35,9 @@ export const fetchServiceSuccess = obj => ({
 
 export const GOOGLE_MAPS = "GOOGLE_MAPS";
 export const googleMaps = () => {
-	console.log('WINDOW: ', window.googleMapInfo)
+	console.log("WINDOW: ", window.googleMapInfo);
 	return {
 		type: GOOGLE_MAPS,
 		payload: window.googleMapInfo
-	}
-		
+	};
 };

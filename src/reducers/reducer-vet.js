@@ -20,23 +20,9 @@ export default (state = initialState, action) => {
 					...state,
 					googleMaps: action.payload
 				}
-			
 
 		default:
 			return state;
 	}
 };
 
-// export (state = {}, action) => {
-// 	switch (action.type) {
-// 		case GOOGLE_MAPS:
-// 			return [
-// 				...state,
-// 				{
-// 					googleMaps: action.payload
-// 				}
-// 			];
-// 		default:
-// 			return state;
-// 	}
-// };

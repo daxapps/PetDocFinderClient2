@@ -6,14 +6,15 @@ import { googleMaps } from "../actions/vet";
 
 class VetList extends React.Component {
 	render() {
-		const vetItems = this.props.vets.map((item, index) => {
+		console.log("VETS: ", this.props.vets);
+		const vetItems = (this.props.vets || [] ).map((item, index) => {
 			return <VetListItem key={index} {...item} />;
 		});
 
 		return (
 			<div id="panel">
 				<h2>Results2</h2>
-				<ul id="places">
+				<ul id="places2">
 					{vetItems}
 				</ul>
 				<button id="more">More results</button>
@@ -24,9 +25,10 @@ class VetList extends React.Component {
 }
 
 const mapStateToProps = (state, props) => {
-	return {}
-}
-const mapDispatchToProps = (dispatch) => {
+	return {};
+};
+
+const mapDispatchToProps = dispatch => {
 	return {
 		googleMapsClick: () => {
 			dispatch(googleMaps());
