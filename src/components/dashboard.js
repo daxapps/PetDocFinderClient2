@@ -2,8 +2,6 @@ import React from "react";
 import { connect } from "react-redux";
 import { Redirect } from "react-router-dom";
 import { fetchProtectedData } from "../actions/protected-data";
-
-// import Vet from "./vet";
 import GoogleMap from "./googlemap";
 
 export class Dashboard extends React.Component {
