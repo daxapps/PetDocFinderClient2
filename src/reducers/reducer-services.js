@@ -14,7 +14,7 @@ const initialState = {
 export default function(state = initialState, action) {
 	switch (action.type) {
 		case ADD_SERVICE:
-		console.log('ACTION: ', action)
+			console.log("ACTION: ", action);
 			return Object.assign({}, state, {
 				services: [
 					...state.services,

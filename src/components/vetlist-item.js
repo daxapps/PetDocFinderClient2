@@ -1,26 +1,30 @@
 import React from "react";
 import { connect } from "react-redux";
-// import { bindActionCreators } from 'redux';
 import { showAddServiceAction } from "../actions/vet";
-// import { fetchService } from "../actions/services";
-// import Vet from "./vet";
+import Vet from "./vet";
 
 class VetListItem extends React.Component {
 	// constructor(props) {
-	// 	super(props);
-		// this.state = {
-		// 	showAddService: false
-		// };
+	// 	super(props)
+	// 	console.log(props);
 	// }
-
 	render() {
+		let showVet = () => {
+			if (this.props.googleDataId === this.props.place_id) {
+				console.log("THISCALLED");
+				return <Vet />;
+			}
+		};
 		return (
 			<li
 				onClick={this.props.showAddServiceComponent}
 				data-id={this.props.place_id}
 				data-name={this.props.name}
 			>
-				{this.props.name} Rating2: {this.props.rating}
+				{this.props.name} Rating: {this.props.rating}
+				{showVet}
+				{this.props.googleDataId}
+				{this.props.place_id}
 			</li>
 		);
 	}
@@ -32,8 +36,12 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
 	return {
-		showAddServiceComponent: (e) => {
-			showAddServiceAction(e.currentTarget.getAttribute("data-id"), e.currentTarget.getAttribute("data-name"), dispatch)
+		showAddServiceComponent: e => {
+			showAddServiceAction(
+				e.currentTarget.getAttribute("data-id"),
+				e.currentTarget.getAttribute("data-name"),
+				dispatch
+			);
 		}
 	};
 }

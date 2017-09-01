@@ -1,9 +1,8 @@
 import { SHOW_ADD_SERVICE, GOOGLE_MAPS } from "../actions/vet";
 
 const initialState = {
-	showAddService: false
-	// data: false
-	// addServiceBtn: false
+	showAddService: false,
+	googleDataId: 'XXX'
 };
 
 export default (state = initialState, action) => {
@@ -12,17 +11,17 @@ export default (state = initialState, action) => {
 			// console.log("CHANGING:");
 			return {
 				...state,
-				showAddService: action.payload
+				showAddService: action.payload._id, 
+				googleDataId: action.payload.googleDataId
 			};
 
 		case GOOGLE_MAPS:
 			return {
-					...state,
-					googleMaps: action.payload
-				}
+				...state,
+				googleMaps: action.payload
+			};
 
 		default:
 			return state;
 	}
 };
-

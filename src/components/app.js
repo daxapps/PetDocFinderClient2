@@ -10,7 +10,6 @@ import Dashboard from "./dashboard";
 import RegistrationPage from "./registration-page";
 import Footer from "./footer";
 
-
 import { refreshAuthToken } from "../actions/auth";
 
 export class App extends React.Component {

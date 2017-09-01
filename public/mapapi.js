@@ -1,7 +1,3 @@
-// This example requires the Places library. Include the libraries=places
-// parameter when you first load the API. For example:
-// <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
-
 var map, infoWindow;
 
 function initMap() {
@@ -68,9 +64,9 @@ function processResults(results, status, pagination) {
     return;
   } else {
     // set window obj here
-    window.googleMapInfo = results
+    window.googleMapInfo = results;
     // console.log('RESULTS:', googleMapInfo)
-    
+    $("#results-btn").click();
     createMarkers(results);
 
     if (pagination.hasNextPage) {
@@ -85,11 +81,6 @@ function processResults(results, status, pagination) {
     }
   }
 }
-
-// var googleBtn = document.getElementById("googleResults")
-// googleBtn.addEventListener("click", function() {
-
-//   })
 
 function createMarkers(places) {
   var bounds = new google.maps.LatLngBounds();
@@ -108,51 +99,9 @@ function createMarkers(places) {
       title: place.name,
       position: place.geometry.location
     });
-    // console.log("PLACE: ", place);
-    placesList.innerHTML +=
-      "<li data-id='" +
-      place.place_id +
-      "'>" +
-      "<a>" +
-      place.name +
-      " Rating: " +
-      place.rating +
-      "</a>" +
-      "</li>";
-
     bounds.extend(place.geometry.location);
   }
   map.fitBounds(bounds);
-
-  // $("#places").on("click", "li", function(e) {
-  //   let currentPlace = {
-  //     vetName: $(this).text(),
-  //     googleDataId: $(this).attr("data-id")
-  //   };
-  //   console.log("CURRENT: ", currentPlace);
-
-  //   $.ajax({
-  //     url: "http://localhost:8080/api/vets/vetlist",
-  //     data: currentPlace,
-  //     method: "POST"
-  //   }).done(function(data) {
-  //     console.log("DATA: ", data);
-
-  //     $.get(`http://localhost:8080/api/vets/vetlist/${data._id}`).done(function(
-  //       data
-  //     ) {
-  //       $(".vet .services").attr("vetId", data._id);
-  //       $(".vet").toggle();
-  //       var services = "";
-  //       data.servicesRef.forEach(function(service) {
-  //         services +=
-  //           "<li>" + service.service + " : " + service.price + "</li>";
-  //       });
-  //       $("#service").html(services);
-  //     });
-  //   });
-  //   console.log("CURRENT2: ", currentPlace);
-  // });
 }
 
 function googleCheck() {
@@ -162,10 +111,3 @@ function googleCheck() {
   }
   google.maps.event.addDomListener(window, "load", initMap);
 }
-
-// TODO: move to reducer
-// console.log('jQuery: ', jQuery)
-// $(document).ready(function(){
-//   console.log('PLACE J: ', $('#places'))
-
-// });

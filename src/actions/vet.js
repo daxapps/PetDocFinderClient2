@@ -2,11 +2,9 @@ import { API_BASE_URL } from "../config";
 
 export const SHOW_ADD_SERVICE = "SHOW_ADD_SERVICE";
 export const showAddServiceAction = (googleId, vetName, dispatch) => {
-	var vetHeaders = new Headers();
-
 	return fetch(`${API_BASE_URL}/vets/vetlist/`, {
 		method: "POST",
-		headers: { 'Content-Type': 'application/json' },
+		headers: { "Content-Type": "application/json" },
 		body: JSON.stringify({ googleDataId: googleId, vetName })
 	})
 		.then(res => {
@@ -21,7 +19,7 @@ export const showAddServiceAction = (googleId, vetName, dispatch) => {
 			dispatch(fetchServiceSuccess(obj));
 			dispatch({
 				type: SHOW_ADD_SERVICE,
-				payload: obj._id
+				payload: obj
 			});
 		});
 };

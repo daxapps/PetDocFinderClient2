@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { Redirect } from "react-router-dom";
 import { fetchProtectedData } from "../actions/protected-data";
 
-import Vet from "./vet";
+// import Vet from "./vet";
 import GoogleMap from "./googlemap";
 
 export class Dashboard extends React.Component {
@@ -20,8 +20,9 @@ export class Dashboard extends React.Component {
       return <Redirect to="/" />;
     }
 
-    const styleSheet = (this.props.showAddService) ? 'block' : 'none'
-    console.log('PROPS_SHOWAS: ', this.props.showAddService)
+    const styleSheet = this.props.showAddService ? "block" : "none";
+    // console.log("PROPS_SHOWAS: ", this.props.showAddService);
+    const style = { textAlign: "center" };
 
     return (
       <div className="dashboard">
@@ -35,11 +36,12 @@ export class Dashboard extends React.Component {
           Protected data: {this.props.protectedData}
         </div>
         <div>
-        <div>
-          <GoogleMap />
-         </div> 
-         <div style={{display:styleSheet}}>
-          <Vet/>
+          <h1 style={style}>Pet Doc Finder</h1>
+          <div>
+            <GoogleMap />
+          </div>
+          <div style={{ display: styleSheet }}>
+            
           </div>
         </div>
       </div>
