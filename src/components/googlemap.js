@@ -1,42 +1,32 @@
-import React, { Component } from "react";
-// import GoogleMapReact from "google-map-react";
-// import { createClient } from "@google/maps";
+import React from "react";
+import { connect } from "react-redux";
+
 import "./googlemap.css";
-// import Vet from "./vet"
+import VetList from "./vet-list";
 
-
-// const API_KEY = "AIzaSyDFjGgNQtuiSuFvfXvs84TS1lY_ZtqYXYc";
-// const AnyReactComponent = ({ text }) =>
-//   <div>
-//     {text}
-//   </div>;
-
-//Documentation for map init and setup:
-//https://github.com/istarkov/google-map-react/blob/master/API.md
-export default class GoogleMap extends Component {
-
-  componentDidMount() {
-    // new google.maps.Map(this.refs.map, {
-    //   zoom: 12,
-    //   center: {
-    //     lat: 29.7604,
-    //     lng: -95.3698
-    //   }
-    // });
-  }
-
+class GoogleMap extends React.Component {
   render() {
     return (
       <div>
-        {/* return <div ref="map" />*/}
-        <div id="map"></div>
-        <input id="pac-input" className="controls" type="text" placeholder="Search New Location" />
-        <div id="panel">
-          <h2>Results</h2>
-          <ul id="places"></ul>
-          <button id="more">More results</button>
-        </div>
+        <div id="map" ref="map" />
+        <input
+          id="pac-input"
+          className="controls"
+          type="text"
+          placeholder="Search New Location"
+        />
+        <VetList vets={this.props.vetList} />
       </div>
     );
   }
 }
+
+const mapStateToProps = (state, props) => {
+  return { vetList: state.vet.googleMaps };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {};
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(GoogleMap);

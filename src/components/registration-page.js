@@ -1,27 +1,45 @@
-import React from 'react';
-import {connect} from 'react-redux';
-import {Link, Redirect} from 'react-router-dom';
+import React from "react";
+import { connect } from "react-redux";
+import { Link, Redirect } from "react-router-dom";
 
-import RegistrationForm from './registration-form';
-import ('./registration-page.css');
+import RegistrationForm from "./registration-form";
+import Header from "./header";
 
 export function RegistrationPage(props) {
-    // If we are logged in (which happens automatically when registration
-    // is successful) redirect to the user's dashboard
-    if (props.loggedIn) {
-        return <Redirect to="/dashboard" />;
-    }
-    return (
-        <div className="home">
-            <h2>Find Your Pet Doc Today</h2>
-            <RegistrationForm />
-            <Link to="/">Login</Link>
-        </div>
-    );
+  // If we are logged in (which happens automatically when registration
+  // is successful) redirect to the user's dashboard
+  if (props.loggedIn) {
+    return <Redirect to="/dashboard" />;
+  }
+  return (
+    <div className="home">
+      <Header />
+      <section>
+        <h3>Make an Informed Decision</h3>
+        <p>
+          Pet Doc Finder shows you veterinians located around you or around a
+          location of your choice. Compare reviews and prices, so that you can
+          choose which one will be the best to take care of your loved one.
+        </p>
+      </section>
+      <section>
+        <h3>Help Others Make an Informed Decision</h3>
+        <p>
+          Help others who are looking for the best vet by adding the price of
+          services from the vet that you like.
+        </p>
+      </section>
+      <section>
+        <h2>Find Your Pet Doc Today</h2>
+        <RegistrationForm />
+        <Link to="/">Login</Link>
+      </section>
+    </div>
+  );
 }
 
 const mapStateToProps = state => ({
-    loggedIn: state.auth.currentUser !== null
+  loggedIn: state.auth.currentUser !== null
 });
 
 export default connect(mapStateToProps)(RegistrationPage);

@@ -1,13 +1,15 @@
-// This example requires the Places library. Include the libraries=places
-// parameter when you first load the API. For example:
-// <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
-
 var map, infoWindow;
 
 function initMap() {
   var houston = { lat: 29.7604, lng: -95.3698 };
+  var mapDiv = document.getElementById("map");
 
-  map = new google.maps.Map(document.getElementById("map"), {
+  if (!mapDiv) {
+    setTimeout(initMap, 500);
+    return false;
+  }
+
+  map = new google.maps.Map(mapDiv, {
     center: houston,
     zoom: 12
   });
@@ -61,6 +63,10 @@ function processResults(results, status, pagination) {
   if (status !== google.maps.places.PlacesServiceStatus.OK) {
     return;
   } else {
+    // set window obj here
+    window.googleMapInfo = results;
+    // console.log('RESULTS:', googleMapInfo)
+    $("#results-btn").click();
     createMarkers(results);
 
     if (pagination.hasNextPage) {
@@ -79,11 +85,9 @@ function processResults(results, status, pagination) {
 function createMarkers(places) {
   var bounds = new google.maps.LatLngBounds();
   var placesList = document.getElementById("places");
-  // var serviceList = document.getElementById("service");
 
   for (var i = 0, place; (place = places[i]); i++) {
     var image = {
-      // url: place.icon,
       size: new google.maps.Size(71, 71),
       origin: new google.maps.Point(0, 0),
       anchor: new google.maps.Point(17, 34),
@@ -92,61 +96,18 @@ function createMarkers(places) {
 
     var marker = new google.maps.Marker({
       map: map,
-      // icon: image,
       title: place.name,
       position: place.geometry.location
     });
-    console.log("PLACE: ", place);
-    placesList.innerHTML +=
-      "<li data-id='" +
-      place.place_id +
-      "'>" +
-      "<a>" +
-      place.name +
-      " Rating: " +
-      place.rating +
-      "</a>" +
-      "</li>";
-
     bounds.extend(place.geometry.location);
   }
   map.fitBounds(bounds);
-
-  $("#places").on("click", "li", function(e) {
-    let currentPlace = {
-      vetName: $(this).text(),
-      googleDataId: $(this).attr("data-id")
-    };
-    console.log("CURRENT: ", currentPlace);
-
-    $.ajax({
-      url: "http://localhost:8080/api/vets/vetlist",
-      data: currentPlace,
-      method: "POST"
-    }).done(function(data) {
-      console.log("DATA: ", data);
-
-      $.get(`http://localhost:8080/api/vets/vetlist/${data._id}`).done(function(
-        data
-      ) {
-        console.log("need to open dropdown with data", data.servicesRef);
-        $(".vet .services").attr("vetId", data._id);
-        $(".vet").toggle();
-        var services = "";
-        data.servicesRef.forEach(function(service) {
-          services += "<li>" + service.service + " : " + service.price + "</li>"
-        });
-        $("#service").html(services);
-      });
-    });
-    console.log("CURRENT2: ", currentPlace);
-  });
 }
-google.maps.event.addDomListener(window, "load", initMap);
 
-// TODO: move to reducer
-// console.log('jQuery: ', jQuery)
-// $(document).ready(function(){
-//   console.log('PLACE J: ', $('#places'))
-
-// });
+function googleCheck() {
+  if (!google) {
+    setTimeout(googleCheck, 500);
+    return false;
+  }
+  google.maps.event.addDomListener(window, "load", initMap);
+}

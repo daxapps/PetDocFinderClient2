@@ -1,22 +1,22 @@
 import React from "react";
 import { connect } from "react-redux";
 import "./vet.css";
-// import store from '../store';
 import { addService } from "../actions/services";
 import Service from "./services";
 import AddForm from "./add-form";
 
-// console.log('GETSTATE: ', store.getState());
-// store.dispatch(addService('Trim Nails', "$25.00"));
-// console.log('GETSTATE2: ', store.getState());
-
 export class Vet extends React.Component {
-	addService(vetId, service, price) {
-		this.props.dispatch(addService(vetId, service, price));
+	componentDidMount() {
+		// console.log("GETSTATE: ", this.props);
+	}
+
+	addService(service, price) {
+		// console.log("PROPSSERVICE: ", this.props.showAddService);
+		addService(service, price, this.props.showAddService, this.props.dispatch);
 	}
 
 	render() {
-		console.log("SERVICES: ", this.props.services.services);
+		// console.log("PROPSSerSer: ", this.props.services.services);
 		const services = this.props.services.services.map((service, index) =>
 			<Service key={index} index={index} {...service} />
 		);
@@ -26,9 +26,8 @@ export class Vet extends React.Component {
 				<div className="services">
 					<AddForm
 						type="service"
-						onAdd={(vetId, service, price) => this.addService(vetId, service, price)}
+						onAdd={(service, price) => this.addService(service, price)}
 					/>
-					{/* use Redux Form??? */}
 				</div>
 				<ul>
 					{services}
@@ -38,8 +37,12 @@ export class Vet extends React.Component {
 	}
 }
 
-const mapStateToProps = (state, props) => ({
-	services: state.services
-});
+const mapStateToProps = (state, props) => {
+	console.log("STATE", state);
+	return {
+		services: state.services,
+		showAddService: state.vet.showAddService
+	};
+};
 
 export default connect(mapStateToProps)(Vet);

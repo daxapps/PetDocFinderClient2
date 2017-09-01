@@ -1,35 +1,22 @@
 import React from "react";
-import {connect} from 'react-redux';
-// // import "./vet.css";
-// import store from '../store';
-// import { addService } from '../actions/services';
+import { connect } from "react-redux";
 
-// console.log('GETSTATE: ', store.getState());
-// store.dispatch(addService('Trim Nails', "$25.00"));
-// console.log('GETSTATE2: ', store.getState());
-
-
-export function Service(props) {
-// 	addService(service, price) {
-// 		this.props.dispatch(addService(service, price));
-// 	}
-
-// 	render() {
-// 		const services = this.props.services.map((service, index) =>
-// 			<Service key={index} index={index} {...service} />
-// 		);
-
+class Service extends React.Component {
+	render() {
 		return (
 			<div>
-				<p className="service" id="service">{props.service}: {props.price}</p>
+				<p className="service" id="service">
+					{this.props.service}: {this.props.price}
+				</p>
 			</div>
 		);
-// 	}
+	}
 }
 
-Service.defaultProps = {
-    service: '',
-    price: ''
+const mapStateToProps = state => {
+	return {
+		showAddService: state.vet.showAddService
+	};
 };
 
-export default connect()(Service);
+export default connect(mapStateToProps)(Service);

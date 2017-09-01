@@ -1,11 +1,11 @@
 import React from "react";
-import './input.css';
+import "./input.css";
 
 export default class Input extends React.Component {
   componentDidUpdate(prevProps) {
-    if (!prevProps.meta.active && this.props.meta.active) {
-      this.input.focus();
-    }
+    // if (!prevProps.meta.active && this.props.meta.active) {
+    //   this.input.focus();
+    // }
   }
 
   render() {
