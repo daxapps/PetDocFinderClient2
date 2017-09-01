@@ -1,12 +1,12 @@
-import {createStore, applyMiddleware, combineReducers} from 'redux';
-import {reducer as formReducer} from 'redux-form';
-import thunk from 'redux-thunk';
-import {loadAuthToken} from './local-storage';
-import authReducer from './reducers/auth';
-import protectedDataReducer from './reducers/protected-data';
-import servicesReducer from './reducers/reducer-services'
-import vetReducer from './reducers/reducer-vet'
-import {setAuthToken} from './actions/auth';
+import { createStore, applyMiddleware, combineReducers } from "redux";
+import { reducer as formReducer } from "redux-form";
+import thunk from "redux-thunk";
+import { loadAuthToken } from "./local-storage";
+import authReducer from "./reducers/auth";
+import protectedDataReducer from "./reducers/protected-data";
+import servicesReducer from "./reducers/reducer-services";
+import vetReducer from "./reducers/reducer-vet";
+import { setAuthToken } from "./actions/auth";
 
 const store = createStore(
     combineReducers({
@@ -16,7 +16,8 @@ const store = createStore(
         services: servicesReducer,
         vet: vetReducer
     }),
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+    window.__REDUX_DEVTOOLS_EXTENSION__ &&
+        window.__REDUX_DEVTOOLS_EXTENSION__(),
     applyMiddleware(thunk)
 );
 
@@ -26,7 +27,5 @@ if (authToken) {
     const token = authToken;
     store.dispatch(setAuthToken(token));
 }
-
-
 
 export default store;
