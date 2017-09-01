@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import ReactStars from "react-stars";
 import { showAddServiceAction } from "../actions/vet";
 import Vet from "./vet";
 
@@ -9,29 +10,25 @@ class VetListItem extends React.Component {
 	// 	console.log(props);
 	// }
 	render() {
-		let showVet = () => {
-			if (this.props.googleDataId === this.props.place_id) {
-				console.log("THISCALLED");
-				return <Vet />;
-			}
-		};
+		console.log("PROPS", this.props.pid, this.props.place_id);
+		let showVet = this.props.pid === this.props.place_id ? <Vet /> : "";
 		return (
 			<li
 				onClick={this.props.showAddServiceComponent}
 				data-id={this.props.place_id}
 				data-name={this.props.name}
 			>
-				{this.props.name} Rating: {this.props.rating}
+				{this.props.name} Rating:{" "}
+				<ReactStars count={this.props.rating} color1={"#ffd700"} />
 				{showVet}
-				{this.props.googleDataId}
-				{this.props.place_id}
 			</li>
 		);
 	}
 }
 
 function mapStateToProps(state) {
-	return {};
+	console.log("STATE:", state);
+	return { pid: state.vet.googleDataId };
 }
 
 function mapDispatchToProps(dispatch) {

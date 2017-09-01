@@ -11,9 +11,9 @@ nav ul li {
 	font-size: 1.2em;
 }
 
-nav ul li:first-child {
+/*nav ul li:first-child {
 	float: left;
-}
+}*/
 
 nav ul li {
 	float: right;
