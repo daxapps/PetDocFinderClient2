@@ -34,9 +34,8 @@ export default function(state = initialState, action) {
 		// 	case EDIT_SERVICE:
 		// }
 
-		// switch (action.type) {
-		// 	case DELETE_SERVICE:
-		// }
+		// case DELETE_SERVICE:
+		// 	return {};
 
 		default:
 			return state;

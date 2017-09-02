@@ -10,7 +10,7 @@ class VetListItem extends React.Component {
 	// 	console.log(props);
 	// }
 	render() {
-		console.log("PROPS", this.props.pid, this.props.place_id);
+		// console.log("PROPS", this.props.pid, this.props.place_id);
 		let showVet = this.props.pid === this.props.place_id ? <Vet /> : "";
 		return (
 			<li
@@ -27,7 +27,7 @@ class VetListItem extends React.Component {
 }
 
 function mapStateToProps(state) {
-	console.log("STATE:", state);
+	// console.log("STATE:", state);
 	return { pid: state.vet.googleDataId };
 }
 

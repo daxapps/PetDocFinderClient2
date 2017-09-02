@@ -14,7 +14,7 @@ export const addService = (service, price, vetId, dispatch) => {
 	})
 		.then(res => res.json())
 		.then(obj => {
-			console.log("OBJ2: ", obj);
+			console.log("OBJ2: ", obj.servicesRef);
 			dispatch(fetchAddServiceSuccess(obj));
 		});
 };
@@ -23,3 +23,11 @@ export const fetchAddServiceSuccess = obj => ({
 	type: ADD_SERVICE,
 	payload: obj
 });
+
+export const DELETE_SERVICE = "DELETE_SERVICE";
+export const deleteService = (vetId, dispatch) => {
+	return fetch(`${API_BASE_URL}/vets/${vetId}/services`, {
+		method: "DELETE"
+	})
+}
+
