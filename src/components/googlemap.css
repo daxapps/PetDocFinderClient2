@@ -1,9 +1,10 @@
 #panel {
-  font-family: 'Roboto','sans-serif';
+  font-family: 'Roboto', 'sans-serif';
   line-height: 30px;
   padding-left: 10px;
 }
-#panel select, #pac-input {
+#panel select,
+#pac-input {
   font-size: 15px;
   margin: 20px auto;
 }
@@ -21,7 +22,7 @@
   z-index: 5;
   border: 1px solid #999;
   background: #fff;
-  margin: 10px auto;
+  margin: 10px auto 100px;
 }
 #panel h2 {
   font-size: 22px;
@@ -29,8 +30,8 @@
 }
 
 #map {
-  height: 300px; 
-  max-width: 80%; 
+  height: 300px;
+  max-width: 80%;
   margin: 0 auto;
 }
 
