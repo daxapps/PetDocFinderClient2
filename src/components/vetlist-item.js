@@ -10,7 +10,7 @@ class VetListItem extends React.Component {
 	// 	console.log(props);
 	// }
 	render() {
-		console.log("PROPS", this.props.pid, this.props.place_id);
+		console.log("PROPS", this.props, this.props.place_id);
 		let showVet = this.props.pid === this.props.place_id ? <Vet /> : "";
 		return (
 			<li
@@ -18,8 +18,19 @@ class VetListItem extends React.Component {
 				data-id={this.props.place_id}
 				data-name={this.props.name}
 			>
-				{this.props.name} Rating:{" "}
-				<ReactStars count={this.props.rating} color1={"#ffd700"} />
+				<strong>
+					{this.props.name}
+				</strong>
+				{"  "}
+				{this.props.vicinity}
+				<div>
+					Rating:<ReactStars
+						style={{ display: "inline !important" }}
+						count={this.props.rating}
+						color1={"#ffd700"}
+					/>
+				</div>
+
 				{showVet}
 			</li>
 		);

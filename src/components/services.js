@@ -5,9 +5,9 @@ class Service extends React.Component {
 	render() {
 		return (
 			<div>
-				<p className="service" id="service">
+				<li className="service" id="service">
 					{this.props.service}: {this.props.price}
-				</p>
+				</li>
 			</div>
 		);
 	}
