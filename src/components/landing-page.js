@@ -30,7 +30,7 @@ export function LandingPage(props) {
         </p>
       </section>
       <section>
-        <h2>Welcome to Pet Doc Finder</h2>
+        <h3>Welcome to Pet Doc Finder</h3>
         <LoginForm />
         <Link to="/register">Register</Link>
       </section>

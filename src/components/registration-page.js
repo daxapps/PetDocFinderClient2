@@ -30,7 +30,7 @@ export function RegistrationPage(props) {
         </p>
       </section>
       <section>
-        <h2>Find Your Pet Doc Today</h2>
+        <h3>Find Your Pet Doc Today</h3>
         <RegistrationForm />
         <Link to="/">Login</Link>
       </section>

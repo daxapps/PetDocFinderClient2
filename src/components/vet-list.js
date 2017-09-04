@@ -10,6 +10,7 @@ class VetList extends React.Component {
 		const vetItems = (this.props.vets || []).map((item, index) => {
 			return <VetListItem key={index} {...item} />;
 		});
+		const styleSheet = { display: 'none'}
 
 		return (
 			<div id="panel">
@@ -19,7 +20,7 @@ class VetList extends React.Component {
 					{vetItems}
 				</ul>
 				<button id="more">More results</button>
-				<button id="results-btn" onClick={this.props.googleMapsClick}>
+				<button id="results-btn" style={styleSheet} onClick={this.props.googleMapsClick}>
 					Results
 				</button>
 			</div>
