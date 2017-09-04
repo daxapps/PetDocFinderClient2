@@ -1,5 +1,4 @@
-// import { ADD_SERVICE } from "../actions/services";
-import { ADD_SERVICE } from "../actions/services";
+import { ADD_SERVICE, DELETE_SERVICE } from "../actions/services";
 import { FETCH_SERVICE_SUCCESS } from "../actions/vet";
 
 const initialState = {
@@ -34,9 +33,12 @@ export default function(state = initialState, action) {
 		// 	case EDIT_SERVICE:
 		// }
 
-		// switch (action.type) {
-		// 	case DELETE_SERVICE:
-		// }
+		case DELETE_SERVICE:
+			return Object.assign({}, state, {
+				services: state.services.filter(itm => {
+					itm !== action.payload;
+				})
+			});
 
 		default:
 			return state;
