@@ -5,7 +5,6 @@ import { Route, withRouter, BrowserRouter } from "react-router-dom";
 import "./app.css";
 
 import TopNav from "./top-nav";
-import HeaderBar from "./header-bar";
 import LandingPage from "./landing-page";
 import Dashboard from "./dashboard";
 import RegistrationPage from "./registration-page";
@@ -58,7 +57,6 @@ export class App extends React.Component {
       <BrowserRouter>
         <div className="app">
           {showTopNav}
-          
           <Route exact path="/" component={LandingPage} />
           <Route exact path="/dashboard" component={Dashboard} />
           <Route exact path="/register" component={RegistrationPage} />
