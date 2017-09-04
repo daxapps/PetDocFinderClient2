@@ -58,7 +58,7 @@ export class App extends React.Component {
       <BrowserRouter>
         <div className="app">
           {showTopNav}
-          <HeaderBar />
+          
           <Route exact path="/" component={LandingPage} />
           <Route exact path="/dashboard" component={Dashboard} />
           <Route exact path="/register" component={RegistrationPage} />

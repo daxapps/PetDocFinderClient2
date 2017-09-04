@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { Redirect } from "react-router-dom";
+import HeaderBar from "./header-bar";
 import { fetchProtectedData } from "../actions/protected-data";
 import GoogleMap from "./googlemap";
 
@@ -24,6 +25,7 @@ export class Dashboard extends React.Component {
 
     return (
       <div className="dashboard">
+        <HeaderBar />
         <div className="dashboard-username">
           Username: {this.props.username}
         </div>

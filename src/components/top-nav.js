@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import HeaderBar from "./header-bar";
 
 import "./top-nav.css";
 
@@ -16,7 +15,6 @@ export default function TopNav() {
 						<li className="nav-item">
 							<Link to="/dashboard">Login</Link>
 						</li>
-						
 					</ul>
 				</div>
 			</div>
