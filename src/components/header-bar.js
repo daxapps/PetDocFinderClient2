@@ -24,7 +24,7 @@ export class HeaderBar extends React.Component {
     return (
       <nav className="navbar navbar-default navbar-fixed-top">
         <div className="container-fluid">
-          <div className="collapse navbar-collapse">
+          <div className="navbar-collapse">
             <ul className="nav navbar-nav navbar-right">
               <li className="nav-item header-bar">
                 {logOutButton}

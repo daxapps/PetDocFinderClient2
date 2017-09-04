@@ -7,7 +7,7 @@ export default function TopNav() {
 	return (
 		<nav className="navbar navbar-default navbar-fixed-top">
 			<div className="container-fluid">
-				<div className="collapse navbar-collapse"  id="navbarNav">
+				<div className="navbar-collapse"  id="navbarNav">
 					<ul className="nav navbar-nav navbar-right">
 						<li className="nav-item">
 							<Link to="/register">SignUp</Link>
