@@ -22,9 +22,17 @@ export class HeaderBar extends React.Component {
       );
     }
     return (
-      <div className="header-bar">
-        {logOutButton}
-      </div>
+      <nav className="navbar navbar-default navbar-fixed-top">
+        <div className="container-fluid">
+          <div className="navbar-collapse">
+            <ul className="nav navbar-nav navbar-right">
+              <li className="nav-item header-bar">
+                {logOutButton}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     );
   }
 }
