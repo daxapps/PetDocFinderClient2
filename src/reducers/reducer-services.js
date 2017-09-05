@@ -1,4 +1,4 @@
-import { ADD_SERVICE, DELETE_SERVICE } from "../actions/services";
+import { ADD_SERVICE, EDIT_SERVICE, DELETE_SERVICE } from "../actions/services";
 import { FETCH_SERVICE_SUCCESS } from "../actions/vet";
 
 const initialState = {
@@ -29,9 +29,14 @@ export default function(state = initialState, action) {
 				services: action.payload
 			});
 
-		// switch (action.type) {
-		// 	case EDIT_SERVICE:
-		// }
+		case EDIT_SERVICE:
+			const servicesMap = state.services.map((item) => {
+				if(item._id == action.payload._id){
+					item.service = action.payload.service
+					item.price = action.payload.price
+				}
+			})
+			return servicesMap
 
 		case DELETE_SERVICE:
 			return Object.assign({}, state, {

@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import ReactStars from "react-stars";
 import { showAddServiceAction } from "../actions/vet";
 import Vet from "./vet";
+import { Form, FormGroup, ControlLabel } from "react-bootstrap";
 
 class VetListItem extends React.Component {
 	// constructor(props) {
@@ -13,25 +14,26 @@ class VetListItem extends React.Component {
 		// console.log("PROPS", this.props.pid, this.props.place_id);
 		let showVet = this.props.pid === this.props.place_id ? <Vet /> : "";
 		return (
-			<li
-				onClick={this.props.showAddServiceComponent}
-				data-id={this.props.place_id}
-				data-name={this.props.name}
-			>
-				<strong>
-					{this.props.name}
-				</strong>
-				{"  "}
-				{this.props.vicinity}
-				<div>
-					Rating:<ReactStars
-						style={{ display: "inline !important" }}
-						count={this.props.rating}
-						color1={"#ffd700"}
-					/>
-				</div>
-				{showVet}
-			</li>
+			<Form inline>
+				<li
+					onClick={this.props.showAddServiceComponent}
+					data-id={this.props.place_id}
+					data-name={this.props.name}
+				>
+					<strong>
+						{this.props.name}
+					</strong>
+					{"  "}
+					{this.props.vicinity}
+					{"  "}
+					<FormGroup controlId="formInlineName">Rating:</FormGroup>
+					{"  "}
+					<FormGroup controlId="formInlineName">
+						<ReactStars count={this.props.rating} color1={"#ffd700"} />
+					</FormGroup>
+					{showVet}
+				</li>
+			</Form>
 		);
 	}
 }
