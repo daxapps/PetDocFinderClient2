@@ -30,19 +30,20 @@ export default function(state = initialState, action) {
 			});
 
 		case EDIT_SERVICE:
-			const servicesMap = state.services.map((item) => {
-				if(item._id === action.payload._id){
-					item.service = action.payload.service
-					item.price = action.payload.price
+			const servicesMap = state.services.map(item => {
+				if (item._id === action.payload._id) {
+					item.service = action.payload.service;
+					item.price = action.payload.price;
 				}
-			})
-			return servicesMap
+			});
+			return servicesMap;
 
 		case DELETE_SERVICE:
+			const servicesFiltered = state.services.filter(itm => {
+				itm !== action.payload;
+			});
 			return Object.assign({}, state, {
-				services: state.services.filter(itm => {
-					itm !== action.payload;
-				})
+				services: servicesFiltered
 			});
 
 		default:

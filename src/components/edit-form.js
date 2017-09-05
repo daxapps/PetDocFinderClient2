@@ -12,11 +12,10 @@ export default class EditForm extends React.Component {
     };
 
     this.onEditClick = this.onEditClick.bind(this);
-
   }
 
   onEditClick(event) {
-    console.log('ANYTHING:')
+    console.log("ANYTHING:");
     event.preventDefault();
     const serviceText = this.serviceInput.value.trim();
 
@@ -47,11 +46,12 @@ export default class EditForm extends React.Component {
     }
 
     return (
-      <div className="edit-form" >
+      <div className="edit-form">
         <FormGroup controlId="formInlineName">
           <ControlLabel>Service</ControlLabel>{" "}
           <input
             type="text"
+            value={this.props.formService}
             placeholder="Service"
             ref={input => (this.serviceInput = input)}
           />
@@ -60,6 +60,7 @@ export default class EditForm extends React.Component {
           <ControlLabel>Price</ControlLabel>{" "}
           <input
             type="text"
+            value={this.props.formPrice}
             placeholder="$00.00"
             ref={input => (this.priceInput = input)}
           />
@@ -68,7 +69,11 @@ export default class EditForm extends React.Component {
           <button className="plus-btn" onClick={this.onEditClick}>
             <i className="fa fa-plus" aria-hidden="true" />
           </button>
-          <button className="cancel-btn" type="button" onClick={() => this.setEditing(false)}>
+          <button
+            className="cancel-btn"
+            type="button"
+            onClick={() => this.setEditing(false)}
+          >
             <i className="fa fa-times" aria-hidden="true" />
           </button>
         </FormGroup>

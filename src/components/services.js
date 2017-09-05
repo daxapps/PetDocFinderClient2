@@ -37,6 +37,8 @@ class Service extends React.Component {
 							type="service"
 							onAdd={(service, price) =>
 								this.props.editService(service, price, this.props._id)}
+							formService={this.props.service}
+							formPrice={this.props.price}
 						/>
 					</FormGroup>
 					<FormGroup controlId="formInlineName">
