@@ -31,7 +31,7 @@ export default function(state = initialState, action) {
 
 		case EDIT_SERVICE:
 			const servicesMap = state.services.map((item) => {
-				if(item._id == action.payload._id){
+				if(item._id === action.payload._id){
 					item.service = action.payload.service
 					item.price = action.payload.price
 				}
