@@ -43,7 +43,7 @@ export default class AddForm extends React.Component {
     }
 
     return (
-      <Form inline className="card add-form" onSubmit={this.onSubmit}>
+      <Form inline className="add-form" onSubmit={this.onSubmit}>
         <FormGroup controlId="formInlineName">
         <ControlLabel>Service</ControlLabel>
         {' '}

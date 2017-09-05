@@ -17,10 +17,13 @@ export class Vet extends React.Component {
 
 	render() {
 		console.log("PROPSSerSer: ", this.props.services.services);
-		const services = this.props.services.services.map((service, index) =>
-			<Service key={index} index={index} {...service} />
-		);
+		let services = "<li>No Services Added</li>";
 
+		if (this.props.services.services) {
+			services = this.props.services.services.map((service, index) =>
+				<Service key={index} index={index} {...service} />
+			);
+		}
 		return (
 			<div className="vet">
 				<div className="services">

@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import ReactStars from "react-stars";
 import { showAddServiceAction } from "../actions/vet";
 import Vet from "./vet";
+import { Form, FormGroup } from "react-bootstrap";
 
 class VetListItem extends React.Component {
 	// constructor(props) {
@@ -18,18 +19,21 @@ class VetListItem extends React.Component {
 				data-id={this.props.place_id}
 				data-name={this.props.name}
 			>
-				<strong>
-					{this.props.name}
-				</strong>
-				{"  "}
-				{this.props.vicinity}
-				<div>
-					Rating:<ReactStars
-						style={{ display: "inline !important" }}
-						count={this.props.rating}
-						color1={"#ffd700"}
-					/>
-				</div>
+				<Form inline>
+					<strong>
+						{this.props.name}
+					</strong>
+					{"  "}
+					{this.props.vicinity}
+				</Form>
+				<Form inline>
+					{"  "}
+					Rating:
+					{"  "}
+					<FormGroup controlId="formInlineName">
+						<ReactStars count={this.props.rating} color1={"#ffd700"} />
+					</FormGroup>
+				</Form>
 				{showVet}
 			</li>
 		);

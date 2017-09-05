@@ -14,7 +14,7 @@ class VetList extends React.Component {
 
 		return (
 			<div id="panel">
-				<h2>Results</h2>
+				<h2 style={{textAlign: "center"}}>Veterinarians</h2>
 				{this.props.googleDataId}
 				<ul id="places">
 					{vetItems}
