@@ -18,7 +18,7 @@ function initMap() {
   // Create the search box and link it to the UI element.
   var input = document.getElementById("pac-input");
   var searchBox = new google.maps.places.SearchBox(input);
-  map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+  map.controls[google.maps.ControlPosition.BOTTOM_CENTER].push(input);
 
   // Bias the SearchBox results towards current map's viewport.
   map.addListener("bounds_changed", function() {
@@ -56,14 +56,15 @@ function initMap() {
         scaledSize: new google.maps.Size(25, 25)
       };
 
-      // Create a marker for each place.
+      // Create a marker for new location.
       markers.push(new google.maps.Marker({
         map: map,
-        icon: icon,
+        icon: pinImage,
         title: place.name,
         position: place.geometry.location
       }));
 
+      // Crate new markers for surrounding vets
       var service = new google.maps.places.PlacesService(map);
         service.nearbySearch(
           {
@@ -97,13 +98,10 @@ function initMap() {
           lng: position.coords.longitude
         };
 
-        // infoWindow.setPosition(pos);
-        // infoWindow.setContent("⭐️");
-        // infoWindow.open(map);
         map.setCenter(pos);
 
         var pinColor = "0000ff";
-        var pinImage = new google.maps.MarkerImage(
+        pinImage = new google.maps.MarkerImage(
           "http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|" +
             pinColor,
           new google.maps.Size(21, 34),
