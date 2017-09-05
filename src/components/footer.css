@@ -5,11 +5,68 @@ footer {
 	height: 100px;
 	width: 100%;
 	background-color: black;
+	/*color: white;*/
 }
 
-h4 {
-	position: absolute;
-	color: white;
-	margin-left: 20px;
-	margin-top: 40px;
+#myFooter {
+    background-color: #3c3d41;
+    color: white;
+    padding-top: 30px;
+}
+
+#myFooter .row {
+	margin-bottom: 60px;
+}
+
+.logo {
+	max-width: 80px;
+}
+
+#myFooter .footer-copyright {
+	/*background-color: #333333;*/
+	padding-top: 3px;
+	padding-bottom: 3px;
+	text-align: center;
+}
+
+#myFooter .footer-copyright p {
+	/*margin: 10px;*/
+	color: #ccc !important;
+}
+#socnet-div {
+	margin-top: -45px;
+}
+#myFooter .social-networks {
+	text-align: right;
+	padding-top: -30px;
+	padding-bottom: 16px;
+}
+
+#myFooter .social-networks a {
+	font-size: 32px;
+	color: #f9f9f9;
+	padding: 10px;
+	transition: 0.2s;
+}
+
+#myFooter .social-networks a:hover {
+	text-decoration: none;
+}
+
+#myFooter .twitter:hover {
+	color: #00aced;
+}
+
+#myFooter .github:hover {
+	color: #ef1a1a;
+}
+
+@media screen and (max-width: 767px) {
+    #myFooter {
+        text-align: center;
+    }
+
+    .footer-copyright {
+    	display: none;
+    }
 }

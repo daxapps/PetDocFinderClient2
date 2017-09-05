@@ -2,7 +2,15 @@ nav {
 	position: relative;
 	height: 60px;
 	padding: 1em;
-	background-color: lightgray;
+}
+
+.navbar-default {
+	background-color: #FEFE66;
+	border-color: darkgray;
+}
+
+.container-fluid {
+	margin-top: -10px;
 }
 
 nav ul li {

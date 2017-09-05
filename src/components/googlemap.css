@@ -5,8 +5,8 @@
 }
 #panel select,
 #pac-input {
-  font-size: 15px;
-  margin: 20px auto;
+  font-size: 2em;
+  margin-bottom: 10px;
 }
 #panel select {
   width: 100%;
@@ -30,8 +30,8 @@
 }
 
 #map {
-  height: 300px;
-  max-width: 70%;
+  height: 350px;
+  max-width: 80%;
   margin: 0 auto;
 }
 

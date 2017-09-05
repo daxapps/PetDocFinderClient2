@@ -8,13 +8,13 @@ class GoogleMap extends React.Component {
   render() {
     return (
       <div>
-        <div id="map" ref="map" />
         <input
           id="pac-input"
           className="controls"
           type="text"
           placeholder="Search New Location"
         />
+        <div id="map" ref="map" />
         <VetList vets={this.props.vetList} />
       </div>
     );
