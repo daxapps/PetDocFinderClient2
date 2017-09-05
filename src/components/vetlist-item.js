@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import ReactStars from "react-stars";
 import { showAddServiceAction } from "../actions/vet";
 import Vet from "./vet";
-import { Form, FormGroup, ControlLabel } from "react-bootstrap";
+import { Form, FormGroup } from "react-bootstrap";
 
 class VetListItem extends React.Component {
 	// constructor(props) {
@@ -14,26 +14,28 @@ class VetListItem extends React.Component {
 		// console.log("PROPS", this.props.pid, this.props.place_id);
 		let showVet = this.props.pid === this.props.place_id ? <Vet /> : "";
 		return (
-			<Form inline>
-				<li
-					onClick={this.props.showAddServiceComponent}
-					data-id={this.props.place_id}
-					data-name={this.props.name}
-				>
+			<li
+				onClick={this.props.showAddServiceComponent}
+				data-id={this.props.place_id}
+				data-name={this.props.name}
+			>
+				<Form inline>
 					<strong>
 						{this.props.name}
 					</strong>
 					{"  "}
 					{this.props.vicinity}
+				</Form>
+				<Form inline>
 					{"  "}
-					<FormGroup controlId="formInlineName">Rating:</FormGroup>
+					Rating:
 					{"  "}
 					<FormGroup controlId="formInlineName">
 						<ReactStars count={this.props.rating} color1={"#ffd700"} />
 					</FormGroup>
-					{showVet}
-				</li>
-			</Form>
+				</Form>
+				{showVet}
+			</li>
 		);
 	}
 }
