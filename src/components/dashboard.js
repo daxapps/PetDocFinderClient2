@@ -4,6 +4,7 @@ import { Redirect } from "react-router-dom";
 import HeaderBar from "./header-bar";
 import { fetchProtectedData } from "../actions/protected-data";
 import GoogleMap from "./googlemap";
+import "./dashboard.css";
 
 export class Dashboard extends React.Component {
   componentDidMount() {
