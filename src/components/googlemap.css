@@ -5,7 +5,7 @@
 }
 #panel select,
 #pac-input {
-  font-size: 2em;
+  font-size: 1.75em;
   margin-bottom: 10px;
 }
 #panel select {
@@ -57,3 +57,26 @@
   width: 50%;
   margin: 15px 25% 100px;
 }
+
+@media only screen and (max-width: 500px) {
+  #map {
+    max-width: 95%;
+  }
+
+  #pac-input {
+  margin-bottom: 25px;
+  /*max-width: 75%;*/
+  }
+
+  #panel {
+  max-width: 95%;
+
+  }
+}
+
+
+
+
+
+
+

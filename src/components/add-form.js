@@ -44,7 +44,7 @@ export default class AddForm extends React.Component {
 
     return (
       <Form inline className="add-form" onSubmit={this.onSubmit}>
-        <FormGroup controlId="formInlineName">
+        <FormGroup className="add-form-group" controlId="formInlineName">
         <ControlLabel>Service</ControlLabel>
         {' '}
         <input
@@ -53,7 +53,7 @@ export default class AddForm extends React.Component {
           ref={input => (this.serviceInput = input)}
         />
         </FormGroup>
-        <FormGroup controlId="formInlineName">
+        <FormGroup className="add-form-group" controlId="formInlineName">
         <ControlLabel>Price</ControlLabel>
         {' '}
         <input
