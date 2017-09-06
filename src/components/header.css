@@ -2,6 +2,8 @@ header {
 	height: 100vh;
 	text-align: center;
 	padding-top: 5%;
+	z-index: -1;
+	
 }
 
 h1 {

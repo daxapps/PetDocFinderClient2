@@ -7,7 +7,14 @@
   }
 }
 
+.service-item {
+  margin-top: 7px;
+  margin-right: 15px;
+}
 
+.price-input {
+  width: 50px;
+}
 
 /*.add-button {
   padding: 8px;

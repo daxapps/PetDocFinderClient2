@@ -7,22 +7,14 @@ import { Form, FormGroup } from "react-bootstrap";
 class Service extends React.Component {
 	constructor(props) {
     super(props);
-
     this.onSubmit = this.onSubmit.bind(this);
   }
+
 	editService(service, price) {
-		// console.log("PROPSSERVICE: ", this.props.showAddService);
-		// editService(service, price, this.props.showAddService, this.props.dispatch);
 	}
+
 	onSubmit(event) {
     event.preventDefault();
-    // const serviceText = this.serviceInput.value.trim();
-
-    // if (serviceText && this.props.onAdd) {
-    //   this.props.onAdd(this.serviceInput.value, this.priceInput.value);
-    // }
-    // this.serviceInput.value = "";
-    // this.priceInput.value = "";
   }
 
 	render() {
@@ -30,7 +22,9 @@ class Service extends React.Component {
 			<div>
 				<Form inline className="service" id="service" onSubmit={this.onSubmit}>
 					<FormGroup controlId="formInlineName">
-						{this.props.service}: {this.props.price}
+						<div className="service-item">
+						<strong>{this.props.service}</strong>: ${this.props.price}
+						</div>
 					</FormGroup>
 					<FormGroup controlId="formInlineName">
 						<EditForm
@@ -43,6 +37,7 @@ class Service extends React.Component {
 					</FormGroup>
 					<FormGroup controlId="formInlineName">
 						<button
+							className="delete-btn"
 							onClick={this.props.onDeleteClick}
 							data-service-id={this.props._id}
 						>

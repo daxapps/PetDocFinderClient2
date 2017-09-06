@@ -35,9 +35,9 @@ export default class EditForm extends React.Component {
   render() {
     if (!this.state.editing) {
       return (
-        <div className="edit-button" onClick={() => this.setEditing(true)}>
+        <div onClick={() => this.setEditing(true)}>
           <Link to="/dashboard">
-            <button>
+            <button className="edit-button">
               <i className="fa fa-pencil" aria-hidden="true" />
             </button>
           </Link>

@@ -10,13 +10,23 @@
 .edit-form input, .add-form input {
 	margin-right: 8px;
 	height: 2em;
+	margin-bottom: 26px
 }
 
 .plus-btn {
 	background-color: green;
+	/*margin-top: 5px;*/
 }
 
 .cancel-btn {
-	background-color: red;
+	background-color: orange;
 }
 
+.edit-button {
+	background-color: blue;
+	color: black;
+}
+
+.delete-btn {
+	background-color: red;
+}

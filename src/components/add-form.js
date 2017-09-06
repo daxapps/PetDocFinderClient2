@@ -56,18 +56,20 @@ export default class AddForm extends React.Component {
         <FormGroup className="add-form-group" controlId="formInlineName">
         <ControlLabel>Price</ControlLabel>
         {' '}
+        {'$'}
         <input
+          className="price-input"
           type="text"
-          placeholder="$00.00"
+          placeholder="00.00"
           ref={input => (this.priceInput = input)}
         />
         </FormGroup>
         {' '}
         <FormGroup controlId="formInlineName">
-        <button>
+        <button className="plus-btn">
           <i className="fa fa-plus" aria-hidden="true" />
         </button>
-        <button type="button" onClick={() => this.setEditing(false)}>
+        <button type="button" className="cancel-btn" onClick={() => this.setEditing(false)}>
           <i className="fa fa-times" aria-hidden="true"></i>
         </button>
         </FormGroup>
