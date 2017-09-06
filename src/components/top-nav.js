@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 
 import "./top-nav.css";
 
+// const loginHref = (ifLoggedIn) ? /dashboard : #loginform
+// Link to ={loginHref}
 export default function TopNav() {
 	return (
 		<nav className="navbar navbar-default navbar-fixed-top">
