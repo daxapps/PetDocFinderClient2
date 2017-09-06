@@ -51,7 +51,7 @@ export default class EditForm extends React.Component {
           <ControlLabel>Service</ControlLabel>{" "}
           <input
             type="text"
-            value={this.props.formService}
+            defaultValue={this.props.formService}
             placeholder="Service"
             ref={input => (this.serviceInput = input)}
           />
@@ -60,7 +60,7 @@ export default class EditForm extends React.Component {
           <ControlLabel>Price</ControlLabel>{" "}
           <input
             type="text"
-            value={this.props.formPrice}
+            defaultValue={this.props.formPrice}
             placeholder="$00.00"
             ref={input => (this.priceInput = input)}
           />
