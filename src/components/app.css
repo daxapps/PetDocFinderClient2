@@ -21,3 +21,9 @@ p {
   color: black !important;
 }
 
+@media only screen and (max-width: 340px) {
+  section:last-child {
+    height: 120vh;
+  }
+  
+}
