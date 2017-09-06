@@ -1,4 +1,5 @@
 var map, infoWindow;
+window.winInitMap = initMap;
 
 function initMap() {
   var houston = { lat: 29.7604, lng: -95.3698 };
