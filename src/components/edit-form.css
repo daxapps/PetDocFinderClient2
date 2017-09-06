@@ -30,3 +30,9 @@
 .delete-btn {
 	background-color: red;
 }
+
+@media only screen and (max-width: 500px) {
+	.edit-form input, .add-form input {
+		margin-bottom: 0;
+	}
+}
