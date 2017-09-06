@@ -34,13 +34,14 @@ export default function(state = initialState, action) {
 				if (item._id === action.payload._id) {
 					item.service = action.payload.service;
 					item.price = action.payload.price;
-				}
+				} 
+				return item
 			});
 			return servicesMap;
 
 		case DELETE_SERVICE:
 			const servicesFiltered = state.services.filter(itm => {
-				itm !== action.payload;
+				return itm !== action.payload;
 			});
 			return Object.assign({}, state, {
 				services: servicesFiltered
