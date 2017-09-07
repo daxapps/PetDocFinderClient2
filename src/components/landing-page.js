@@ -8,7 +8,6 @@ import Header from './header';
 export function LandingPage(props) {
   // If we are logged in redirect straight to the user's dashboard
   if (props.loggedIn) {
-    window.winInitMap()
     window.scrollTo( 0, 0 );
     return <Redirect to="/dashboard" />;
   }

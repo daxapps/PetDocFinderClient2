@@ -11,6 +11,7 @@ export class Dashboard extends React.Component {
     if (!this.props.loggedIn) {
       return;
     }
+    window.winInitMap()
     this.props.dispatch(fetchProtectedData());
   }
 
