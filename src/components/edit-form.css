@@ -34,5 +34,11 @@
 @media only screen and (max-width: 500px) {
 	.edit-form input, .add-form input {
 		margin-bottom: 0;
+		height: 2.5em;
+	}
+
+	.edit-form button, .service button, .add-form button {
+		height: 2.5em;
+		width: 2.5em;
 	}
 }
