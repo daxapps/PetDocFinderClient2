@@ -31,7 +31,7 @@
 	background-color: red;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 330px) {
 	.edit-form input, .add-form input {
 		margin-bottom: 0;
 		height: 2.5em;
