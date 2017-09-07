@@ -33,6 +33,11 @@ export function LandingPage(props) {
       </section>
       <section>
         <h3>Welcome to Pet Doc Finder</h3>
+        <div className="demo-info">
+          <p>To access the demo account, please enter the following credentials.</p>
+          <p>Username: Demo</p>
+          <p>Password: password</p>
+        </div>
         <LoginForm />
         <Link to="/register">Register</Link>
       </section>
