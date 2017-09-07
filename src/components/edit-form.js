@@ -14,12 +14,10 @@ export class EditForm extends React.Component {
     };
 
     this.onEditClick = this.onEditClick.bind(this);
-    this.onSubmit = this.onSubmit.bind(this);
 
   }
 
   onEditClick(event) {
-    // console.log("ANYTHING:");
     event.preventDefault();
     const serviceText = this.serviceInput.value.trim();
 
@@ -36,14 +34,7 @@ export class EditForm extends React.Component {
     });
   }
 
-  onSubmit(event) {
-    event.preventDefault();
-  }
-
-
   render() {
-  console.log('PROPSID:', this.state._id)
-
     if (!this.state.editing) {
       return (
         <div>
@@ -54,11 +45,11 @@ export class EditForm extends React.Component {
               </button>
             </Link>
           </div>
-          <div onSubmit={this.onSubmit}>
+          <div>
             <button
                 className="delete-btn"
                 onClick={this.props.onDeleteClick}
-                data-service-id={this.props._id}
+                data-service-id={this.props.formServiceId}
               >
                 <i className="fa fa-trash" aria-hidden="true" />
             </button>
