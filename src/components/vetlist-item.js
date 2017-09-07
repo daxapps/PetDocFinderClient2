@@ -30,7 +30,7 @@ class VetListItem extends React.Component {
 					Rating:
 					{"  "}
 					<FormGroup controlId="formInlineName">
-						<ReactStars count={this.props.rating} color1={"#ffd700"} />
+						<ReactStars className="rating-stars" count={this.props.rating} color1={"#ffd700"} />
 					</FormGroup>
 				</Form>
 				{showVet}

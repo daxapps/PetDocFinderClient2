@@ -7,4 +7,12 @@
 	.vet ul {
 		padding-left: 0;
 	}
+
+	.vet-rating .form-group {
+		float: right;
+	}
+
+	.vet-rating {
+		max-width: 40%;
+	}
 }

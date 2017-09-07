@@ -40,5 +40,29 @@
 	.edit-form button, .service button, .add-form button {
 		height: 2.5em;
 		width: 2.5em;
+		/*float: left;*/
+		bottom: 50px;
+	}
+
+	.edit-button {
+		float: left;
+	}
+
+	.edit-service-name, .edit-service-price {
+		float: left;
+		/*clear: right;*/
+	}
+
+	.delete-btn {
+		/*clear: left;*/
+		float: left;
+	}
+
+	.edit-service-price {
+		/*clear: right;*/
+	}
+
+	.plus-btn, .cancel-btn {
+		/*float: left;*/
 	}
 }

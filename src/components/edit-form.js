@@ -47,7 +47,7 @@ export default class EditForm extends React.Component {
 
     return (
       <div className="edit-form">
-        <FormGroup controlId="formInlineName">
+        <FormGroup controlId="formInlineName" className="edit-service-name">
           <ControlLabel>Service</ControlLabel>{" "}
           <input
             type="text"
@@ -56,7 +56,7 @@ export default class EditForm extends React.Component {
             ref={input => (this.serviceInput = input)}
           />
         </FormGroup>
-        <FormGroup controlId="formInlineName">
+        <FormGroup controlId="formInlineName" className="edit-service-price">
           <ControlLabel>Price</ControlLabel>{" "}
           <input
             type="text"
