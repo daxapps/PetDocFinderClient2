@@ -36,13 +36,13 @@ class Service extends React.Component {
 						/>
 					</FormGroup>
 					<FormGroup controlId="formInlineName">
-						<button
+						{/*<button
 							className="delete-btn"
 							onClick={this.props.onDeleteClick}
 							data-service-id={this.props._id}
 						>
 							<i className="fa fa-trash" aria-hidden="true" />
-						</button>
+						</button>*/}
 					</FormGroup>
 				</Form>
 			</div>
@@ -60,14 +60,15 @@ const mapDispatchToProps = dispatch => {
 	return {
 		editService: (service, price, serviceId) => {
 			editService(service, price, serviceId, dispatch);
-		},
-		onDeleteClick: btn => {
-			console.log("BTNTARGET:", btn.currentTarget);
-			deleteService(
-				btn.currentTarget.getAttribute("data-service-id"),
-				dispatch
-			);
 		}
+		// ,
+		// onDeleteClick: btn => {
+		// 	console.log("BTNTARGET:", btn.currentTarget);
+		// 	deleteService(
+		// 		btn.currentTarget.getAttribute("data-service-id"),
+		// 		dispatch
+		// 	);
+		// }
 	};
 };
 
