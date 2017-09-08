@@ -4,7 +4,53 @@ header img {
     /*height: 80vh;*/
 }
 
+section {
+    height: 100vh;
+    background-color: #AEF1F8;
+    text-align: center;
+}
+
+section:nth-child(odd) {
+    background: #C40712;
+}
+
+section:nth-child(3) h3,
+section:nth-child(3) p {
+    color: white;
+}
+
+h3 {
+    padding: 15% 0 0;
+    font-size: 1.5em;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+p {
+    max-width: 40%;
+    margin: 10px auto;
+    color: black;
+}
+
+.screen-shot img {
+    max-width: 50%;
+    margin-top: 20px;
+}
+
+.demo-info {
+    border: 2px solid darkgray;
+    max-width: 20%;
+    margin: 10px auto;
+}
+
+.demo-info p {
+    max-width: 100%;
+    margin: 0;
+}
+
+
 /*Login & Registration Form*/
+
 .login-form {
     max-width: 50%;
     margin: 0 auto;
@@ -23,49 +69,11 @@ input {
     background-color: red;
 }
 
+
 /* Dashboard */
+
 .dashboard {
     background-color: #0ddfff;
-}
-
-
-
-section {
-    height: 100vh;
-    background-color: #AEF1F8;
-    text-align: center;
-}
-
-section:nth-child(odd) {
-    background: #C40712;
-}
-
-section:nth-child(3) h3, section:nth-child(3) p  {
-    color: white;
-}
-
-h3 {
-    padding: 15% 0 0;
-    font-size: 1.5em;
-    max-width: 80%;
-    margin: 0 auto;
-}
-
-p {
-    max-width: 40%;
-    margin: 10px auto;
-    color: black;
-}
-
-.demo-info {
-    border: 2px solid darkgray;
-    max-width: 20%;
-    margin: 10px auto;
-}
-
-.demo-info p {
-    max-width: 100%;
-    margin: 0;
 }
 
 @media only screen and (max-width: 500px) {
@@ -77,5 +85,9 @@ p {
 
     p {
         max-width: 80%;
+    }
+
+    .screen-shot img {
+        max-width: 75%;
     }
 }
