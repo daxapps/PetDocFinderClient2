@@ -5,6 +5,7 @@ import { Link, Redirect } from 'react-router-dom';
 import LoginForm from './login-form';
 import Header from './header';
 import ScreenShot from "./screen-shot.jpg";
+import ScreenShot2 from "./screen-shot-2.jpg";
 
 
 export function LandingPage(props) {
@@ -34,6 +35,9 @@ export function LandingPage(props) {
           Help others who are looking for the best vet by adding the price of
           services from the vet that you like.
         </p>
+        <div className="screen-shot">
+          <img src={ScreenShot2} alt="screen shot of vet list add service feature" />
+        </div>
       </section>
       <section>
         <h3>Welcome to Pet Doc Finder</h3>
