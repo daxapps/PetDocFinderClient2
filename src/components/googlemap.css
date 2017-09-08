@@ -3,6 +3,8 @@
   line-height: 30px;
   padding-left: 10px;
 }
+
+/* Search new location field */
 #panel select,
 #pac-input {
   font-size: 1.75em;

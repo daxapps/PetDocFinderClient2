@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { editService, deleteService } from "../actions/services";
+import { editService } from "../actions/services";
 import EditForm from "./edit-form";
 import { Form, FormGroup } from "react-bootstrap";
 
@@ -25,8 +25,6 @@ class Service extends React.Component {
 						<div className="service-item">
 						<strong>{this.props.service}</strong>: ${this.props.price}
 						</div>
-					</FormGroup>
-					<FormGroup controlId="formInlineName">
 						<EditForm
 							type="service"
 							onAdd={(service, price) =>

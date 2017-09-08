@@ -1,8 +1,9 @@
 .navbar {
     height: 60px;
     padding: 1em;
-    background-color: #FEFE66;
+    background-color: black;
     border-color: darkgray;
+    border: 0;
 }
 
 .container-fluid {
@@ -19,6 +20,14 @@ nav ul li {
     float: right;
     display: inline-block;
     margin: 0 10px;
+}
+
+.nav-item a {
+    color: white !important;
+}
+
+.navbar-nav li a:hover {
+    color: blue !important;
 }
 
 @media only screen and (max-width: 500px) {

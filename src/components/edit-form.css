@@ -1,4 +1,4 @@
-.edit-form button, .service button, .add-form button {
+/*.edit-form button, .service button, .add-form button {
 	height: 2em;
 	width: 2em;
 	border-radius: 4px;
@@ -15,7 +15,6 @@
 
 .plus-btn {
 	background-color: green;
-	/*margin-top: 5px;*/
 }
 
 .cancel-btn {
@@ -25,13 +24,38 @@
 .edit-button {
 	background-color: blue;
 	color: black;
+	float: left;
 }
 
 .delete-btn {
 	background-color: red;
+}*/
+
+/*@media only screen and (max-width: 800px) {
+	.edit-form button {
+		margin: 8px 0 0;
+	}
 }
 
+@media only screen and (min-width: 400px) {
+	.add-form .form-group:last-child {
+	}
+}
+
+
 @media only screen and (max-width: 330px) {
+
+	.edit-service-name, .edit-service-price {
+		float: left;
+	}
+
+	.edit-form .plus-btn, .edit-form .cancel-btn {
+		float: left;
+		margin-top: -10px;
+	}
+}
+
+@media only screen and (max-width: 380px) {
 	.edit-form input, .add-form input {
 		margin-bottom: 0;
 		height: 2.5em;
@@ -40,7 +64,6 @@
 	.edit-form button, .service button, .add-form button {
 		height: 2.5em;
 		width: 2.5em;
-		/*float: left;*/
 		bottom: 50px;
 	}
 
@@ -48,21 +71,19 @@
 		float: left;
 	}
 
-	.edit-service-name, .edit-service-price {
-		float: left;
-		/*clear: right;*/
-	}
-
 	.delete-btn {
-		/*clear: left;*/
 		float: left;
+	}
+	
+	.edit-service-name {
+		clear: left;
 	}
 
 	.edit-service-price {
-		/*clear: right;*/
 	}
 
-	.plus-btn, .cancel-btn {
-		/*float: left;*/
+	.edit-form .plus-btn, .edit-form .cancel-btn {
+		float: left;
+		margin-top: -10px;
 	}
-}
+}*/

@@ -27,11 +27,15 @@ class VetListItem extends React.Component {
 					{this.props.vicinity}
 				</Form>
 				<Form inline className="vet-rating">
+					<div className="rating-title">
 					Rating:
+
 					{"  "}
+					</div>
 					<FormGroup controlId="formInlineName">
 						<ReactStars className="rating-stars" count={this.props.rating} color1={"#ffd700"} />
 					</FormGroup>
+
 				</Form>
 				{showVet}
 			</li>

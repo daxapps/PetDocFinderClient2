@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Form, FormGroup, ControlLabel } from "react-bootstrap";
+// import { Form, FormGroup, ControlLabel } from "react-bootstrap";
 
-import "./add-form.css";
+// import "./add-form.css";
 
 export default class AddForm extends React.Component {
   constructor(props) {
@@ -43,37 +43,36 @@ export default class AddForm extends React.Component {
     }
 
     return (
-      <Form inline className="add-form" onSubmit={this.onSubmit}>
-        <FormGroup className="add-form-group service-input-section" controlId="formInlineName">
-        <ControlLabel>Service</ControlLabel>
-        {' '}
-        <input
-          type="text"
-          placeholder="Service"
-          ref={input => (this.serviceInput = input)}
-        />
-        </FormGroup>
-        <FormGroup className="add-form-group price-input-section" controlId="formInlineName">
-        <ControlLabel>Price</ControlLabel>
-        {' '}
-        {'$'}
-        <input
-          className="price-input"
-          type="text"
-          placeholder="00.00"
-          ref={input => (this.priceInput = input)}
-        />
-        </FormGroup>
-        {' '}
-        <FormGroup controlId="formInlineName">
-        <button className="plus-btn">
-          <i className="fa fa-plus" aria-hidden="true" />
-        </button>
-        <button type="button" className="cancel-btn" onClick={() => this.setEditing(false)}>
-          <i className="fa fa-times" aria-hidden="true"></i>
-        </button>
-        </FormGroup>
-      </Form>
+      <form className="add-form" onSubmit={this.onSubmit}>
+        <div className="add-form-group"> 
+          <div className="service-input-section">
+            <label>Service</label>
+            {' '}
+            <input
+              type="text"
+              placeholder="Service"
+              ref={input => (this.serviceInput = input)}
+            />
+          </div>
+          <div className="price-input-section">
+            <label>Price</label>
+            {' '}
+            {'$'}
+            <input
+              className="price-input"
+              type="text"
+              placeholder="00.00"
+              ref={input => (this.priceInput = input)}
+            />
+            <button className="plus-btn">
+              <i className="fa fa-plus" aria-hidden="true" />
+            </button>
+            <button type="button" className="cancel-btn" onClick={() => this.setEditing(false)}>
+              <i className="fa fa-times" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </form>
     );
   }
 }

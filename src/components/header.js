@@ -2,7 +2,7 @@ import React from "react";
 // import {connect} from 'react-redux';
 
 import Banner from "./banner.jpg";
-import "./header.css";
+// import "./header.css";
 
 export function Header() {
 	return (
