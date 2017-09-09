@@ -36,7 +36,7 @@ export function LandingPage(props) {
           services from the vet that you like.
         </p>
         <div className="screen-shot">
-          <img src={ScreenShot2} alt="screen shot of vet list add service feature" />
+          <img src={ScreenShot2} alt="screen shot of vet list add service" />
         </div>
       </section>
       <section>
