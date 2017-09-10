@@ -37,6 +37,10 @@
     border-top: 0;
 }
 
+.edit-form button {
+    margin: 10px 8px 0;
+}
+
 .edit-form input,
 .add-form input {
     margin-right: 8px;
