@@ -4,8 +4,8 @@ import { Redirect } from 'react-router-dom';
 
 // import LoginForm from './login-form';
 import Header from './header';
-import ScreenShot from "../Images/screen-shot.jpg";
-import ScreenShot2 from "../Images/screen-shot-2.jpg";
+import ScreenShot from "../images/screen-shot.jpg";
+import ScreenShot2 from "../images/screen-shot-2.jpg";
 
 
 export function LandingPage(props) {
