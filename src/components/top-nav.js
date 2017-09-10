@@ -15,7 +15,7 @@ export default function TopNav() {
 							<Link to="/register">SignUp</Link>
 						</li>
 						<li className="nav-item">
-							<Link to="/dashboard">Login / Demo</Link>
+							<Link to="/login">Login / Demo</Link>
 						</li>
 					</ul>
 				</div>

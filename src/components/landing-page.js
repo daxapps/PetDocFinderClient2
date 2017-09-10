@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Link, Redirect } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 
-import LoginForm from './login-form';
+// import LoginForm from './login-form';
 import Header from './header';
 import ScreenShot from "./screen-shot.jpg";
 import ScreenShot2 from "./screen-shot-2.jpg";
@@ -36,18 +36,8 @@ export function LandingPage(props) {
           services from the vet that you like.
         </p>
         <div className="screen-shot">
-          <img src={ScreenShot2} alt="screen shot of vet list add service feature" />
+          <img src={ScreenShot2} alt="screen shot of vet list add service" />
         </div>
-      </section>
-      <section>
-        <h3>Welcome to Pet Doc Finder</h3>
-        <div className="demo-info">
-          <p>To access the demo account, please enter the following credentials.</p>
-          <p>Username: Demo</p>
-          <p>Password: password</p>
-        </div>
-        <LoginForm />
-        <Link to="/register">Register</Link>
       </section>
     </div>
   );
