@@ -15,6 +15,7 @@ class GoogleMap extends React.Component {
           placeholder="Search New Location"
         />
         <div id="map" ref="map" />
+        <h4>Click on vet listing below to see prices.</h4>
         <VetList vets={this.props.vetList} />
       </div>
     );

@@ -33,6 +33,9 @@ h3 {
     margin: 0 auto;
 }
 
+h4 {
+    text-align: center;
+}
 p {
     max-width: 40%;
     margin: 10px auto;
