@@ -139,8 +139,8 @@ function initMap() {
     infoWindow.setPosition(pos);
     infoWindow.setContent(
       browserHasGeolocation
-        ? "Error: The Geolocation service failed."
-        : "Error: Your browser doesn't support geolocation."
+        ? "Make sure the location services are turned on for your browser"
+        : "Make sure the location services are turned on for your browser"
     );
     infoWindow.open(map);
   }
