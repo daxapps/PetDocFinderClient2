@@ -19,7 +19,7 @@
 }
 
 .service-input-section {
-    float: left;
+    /*float: left;*/
 }
 
 .price-input {
@@ -32,7 +32,7 @@
     height: 2em;
     width: 4em;
     border-radius: 4px;
-    margin: 0 8px;
+    margin: 14px 8px 0;
     padding-top: 0;
     border-top: 0;
 }
@@ -112,7 +112,19 @@
     .edit-service-price {
         /*float: left;*/
     }
+
+    .add-form button {
+      margin-top: 0;
+    }
+
+    .add-form input {
+      margin-bottom: 0;
+    }
 }
+
+@media only screen and (max-width: 400px) {
+    
+  }
 
 
 /* small phones portrait */

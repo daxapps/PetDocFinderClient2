@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Form, FormGroup, ControlLabel } from "react-bootstrap";
+import { Form, FormGroup } from "react-bootstrap";
 
 // import "./add-form.css";
 
@@ -45,7 +45,7 @@ export default class AddForm extends React.Component {
     return (
       <Form inline className="add-form" onSubmit={this.onSubmit}>
         <FormGroup className="add-form-group" controlId="formInlineName"> 
-          <div className="service-input-section">
+          
             <label>Service</label>
             {' '}
             <input
@@ -53,8 +53,8 @@ export default class AddForm extends React.Component {
               placeholder="Service"
               ref={input => (this.serviceInput = input)}
             />
-          </div>
-          <div className="price-input-section">
+          </FormGroup>
+        <FormGroup controlId="formInlineName" className="">
             <label>Price</label>
             {' '}
             {'$'}
@@ -64,13 +64,15 @@ export default class AddForm extends React.Component {
               placeholder="00.00"
               ref={input => (this.priceInput = input)}
             />
+            </FormGroup>{" "}
+        <FormGroup controlId="formInlineName">
             <button className="plus-btn">
               <i className="fa fa-plus" aria-hidden="true" />
             </button>
             <button type="button" className="cancel-btn" onClick={() => this.setEditing(false)}>
               <i className="fa fa-times" aria-hidden="true"></i>
             </button>
-          </div>
+         
         </FormGroup>
       </Form>
     );
