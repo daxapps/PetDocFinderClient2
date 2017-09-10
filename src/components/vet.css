@@ -49,7 +49,7 @@
 }
 
 .plus-btn {
-    background-color: green;
+    background-color: lightgreen;
 }
 
 .cancel-btn {
@@ -57,13 +57,13 @@
 }
 
 .edit-button {
-    background-color: blue;
+    background-color: #0ddfff;
     color: black;
     float: left;
 }
 
 .delete-btn {
-    background-color: red;
+    background-color: #EA0004;
 }
 
 

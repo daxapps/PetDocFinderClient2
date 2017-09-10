@@ -11,7 +11,7 @@ section {
 }
 
 section:nth-child(odd) {
-    background: #C40712;
+    background: #EA0004;
 }
 
 section:nth-child(3) h3,
@@ -66,7 +66,12 @@ input {
 }
 
 .reg-btn {
-    background-color: red;
+    background-color: #0ddfff;
+    color: black;
+}
+
+a {
+    color: #0ddfff !important;
 }
 
 
@@ -89,5 +94,9 @@ input {
 
     .screen-shot img {
         max-width: 75%;
+    }
+
+    .login-page h3, .reg-page h3 {
+        margin-top: 15%;
     }
 }

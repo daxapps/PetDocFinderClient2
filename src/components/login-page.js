@@ -12,7 +12,7 @@ export function LoginPage(props) {
   }
 
 	return (
-		<div>
+		<div className="login-page">
 			<section>
         <h3>Welcome to Pet Doc Finder</h3>
         <div className="demo-info">
