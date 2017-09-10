@@ -1,6 +1,6 @@
 import React from "react";
 import "./footer.css";
-import Logo from "./DAXapps-logo.png";
+import Logo from "../Images/DAXapps-logo.png";
 
 export function Footer() {
 	return (
