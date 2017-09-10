@@ -17,7 +17,7 @@ export function RegistrationPage(props) {
       <section>
         <h3>Find Your Pet Doc Today</h3>
         <RegistrationForm />
-        <Link to="/">Login</Link>
+        <Link to="/login">Login</Link>
       </section>
     </div>
   );

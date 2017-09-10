@@ -10,19 +10,26 @@ section {
     text-align: center;
 }
 
-section:nth-child(odd) {
+.home section:nth-child(odd) {
     background: #EA0004;
 }
 
-section:nth-child(3) h3,
+section:nth-child(3) h3 {
+    color: #AEF1F8;
+}
 section:nth-child(3) p {
     color: white;
+}
+
+.login-form h3, .reg-form h3 {
+    color: #EA0004;
 }
 
 h3 {
     padding: 15% 0 0;
     font-size: 1.5em;
     max-width: 80%;
+    color: #EA0004;
     margin: 0 auto;
 }
 
@@ -66,12 +73,13 @@ input {
 }
 
 .reg-btn {
-    background-color: #0ddfff;
+    background-color: #EA0004;
     color: black;
 }
 
-a {
-    color: #0ddfff !important;
+a:hover {
+    text-decoration: none;
+    /*color: #0ddfff !important;*/
 }
 
 
