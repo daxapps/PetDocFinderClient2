@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import { Form, FormGroup, ControlLabel } from "react-bootstrap";
+import { Form, FormGroup, ControlLabel } from "react-bootstrap";
 
 // import "./add-form.css";
 
@@ -43,8 +43,8 @@ export default class AddForm extends React.Component {
     }
 
     return (
-      <form className="add-form" onSubmit={this.onSubmit}>
-        <div className="add-form-group"> 
+      <Form inline className="add-form" onSubmit={this.onSubmit}>
+        <FormGroup className="add-form-group" controlId="formInlineName"> 
           <div className="service-input-section">
             <label>Service</label>
             {' '}
@@ -71,8 +71,8 @@ export default class AddForm extends React.Component {
               <i className="fa fa-times" aria-hidden="true"></i>
             </button>
           </div>
-        </div>
-      </form>
+        </FormGroup>
+      </Form>
     );
   }
 }
