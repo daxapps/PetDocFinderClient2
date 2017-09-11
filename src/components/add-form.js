@@ -44,8 +44,7 @@ export default class AddForm extends React.Component {
 
     return (
       <Form inline className="add-form" onSubmit={this.onSubmit}>
-        <FormGroup className="add-form-group" controlId="formInlineName"> 
-          
+        <FormGroup className="add-form-group" controlId="formInlineName">      
             <label>Service</label>
             {' '}
             <input

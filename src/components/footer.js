@@ -5,8 +5,7 @@ import "./footer.css";
 export function Footer() {
 	return (
 		<footer id="myFooter">
-			<div className="container">
-				
+			<div className="container">			
 				<div className="footer-copyright">
 					<p>© 2017 Copyright DaxApps </p>
 				</div>
