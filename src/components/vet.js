@@ -16,7 +16,7 @@ export class Vet extends React.Component {
 	}
 
 	render() {
-		console.log("PROPSSerSer: ", this.props.services.services);
+		// console.log("PROPSSerSer: ", this.props.services.services);
 		let services = "<li>No Services Added</li>";
 
 		if (this.props.services.services) {

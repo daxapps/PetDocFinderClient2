@@ -13,3 +13,7 @@
     //     expect(shallow( <LoginForm /> ).is('.navbar')).to.equal(true);
     // });
 // });
+
+
+// TypeError: this.props.handleSubmit is not a function
+// https://github.com/erikras/redux-form/issues/2095

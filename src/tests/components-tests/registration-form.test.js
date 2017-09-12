@@ -9,7 +9,7 @@
 //         shallow( <RegistrationForm /> );
 //     });
 
-    // it("contains spec with an expectation", () => {
-    //     expect(shallow( <LoginPage /> ).is('.navbar')).to.equal(true);
-    // });
+//     // it("contains spec with an expectation", () => {
+//     //     expect(shallow( <LoginPage /> ).is('.navbar')).to.equal(true);
+//     // });
 // });
