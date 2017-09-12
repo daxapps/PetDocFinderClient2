@@ -2,6 +2,7 @@ import { API_BASE_URL } from "../config";
 
 export const SHOW_ADD_SERVICE = "SHOW_ADD_SERVICE";
 export const showAddServiceAction = (googleId, vetName, dispatch) => {
+	console.log('GOOGLEID', googleId, vetName)
 	return fetch(`${API_BASE_URL}/vets/vetlist/`, {
 		method: "POST",
 		headers: { "Content-Type": "application/json" },

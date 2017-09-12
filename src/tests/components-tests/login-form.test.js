@@ -1,19 +1,17 @@
-// import React from 'react';
-// import { expect } from 'chai';
-// import { shallow, mount } from 'enzyme';
+import React from 'react';
+import { expect } from 'chai';
+import { shallow, mount } from 'enzyme';
 
-// import { LoginForm } from '../../components/login-form';
+import { LoginForm } from '../../components/login-form';
 
-// describe('<LoginForm />', () => {
-//     it('Renders without crashing', () => {
-//         shallow( <LoginForm /> );
-//     });
+describe('<LoginForm />', () => {
+	const handleFnc = () =>{};
+  it('Renders without crashing', () => {
+      shallow( <LoginForm handleSubmit={handleFnc} /> );
+  });
 
-    // it("contains spec with an expectation", () => {
-    //     expect(shallow( <LoginForm /> ).is('.navbar')).to.equal(true);
-    // });
-// });
-
-
-// TypeError: this.props.handleSubmit is not a function
-// https://github.com/erikras/redux-form/issues/2095
+  it("contains spec with an expectation", () => {
+		const handleFnc = () =>{};
+  	expect(shallow( <LoginForm handleSubmit={handleFnc} /> ).is('.login-form')).to.equal(true);
+  });
+});
