@@ -1,15 +1,16 @@
-// import React from 'react';
-// import { expect } from 'chai';
-// import { shallow, mount } from 'enzyme';
+import React from 'react';
+import { expect } from 'chai';
+import { shallow, mount } from 'enzyme';
 
-// import { RegistrationForm } from '../../components/registration-form';
+import { RegistrationForm } from '../../components/registration-form';
 
-// describe('<RegistrationForm />', () => {
-//     it('Renders without crashing', () => {
-//         shallow( <RegistrationForm /> );
-//     });
+describe('<RegistrationForm />', () => {
+	const handleFnc = () =>{};
+  it('Renders without crashing', () => {
+    shallow( <RegistrationForm handleSubmit={handleFnc} /> );
+  });
 
-//     // it("contains spec with an expectation", () => {
-//     //     expect(shallow( <LoginPage /> ).is('.navbar')).to.equal(true);
-//     // });
-// });
+  it("contains spec with an expectation", () => {
+    expect(shallow( <RegistrationForm handleSubmit={handleFnc}  /> ).is('.login-form')).to.equal(true);
+  });
+});

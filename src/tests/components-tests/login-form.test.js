@@ -11,7 +11,6 @@ describe('<LoginForm />', () => {
   });
 
   it("contains spec with an expectation", () => {
-		const handleFnc = () =>{};
   	expect(shallow( <LoginForm handleSubmit={handleFnc} /> ).is('.login-form')).to.equal(true);
   });
 });

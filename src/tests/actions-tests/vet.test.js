@@ -4,7 +4,7 @@ import {
 	FETCH_SERVICE_SUCCESS, fetchServiceSuccess, 
 	GOOGLE_MAPS, googleMaps
 } from '../../actions/vet';
-import Utilities from '../../utilities/utilities';
+import Vet from '../utilities/models';
 
 mongoose.connect('mongodb://localhost/test');
 
@@ -27,25 +27,20 @@ describe('googleMaps', () => {
 	});
 });
 
+	// console.log('VET3:', Vet)
 
 describe('Vets', () => {
-	var currentVet = null;
-
-	beforeEach(function(done){    
-    // register?????    
-    vet.register("12356432643", "Petsmart", function(doc){      
-      currentVet = doc;      
-      done();    
-    });  
-  });  
-
-  afterEach(function(done){    
-    vet.model.remove({}, function() {      
-      done();    
-    });  
-  });
+	// console.log('VET:', Vet)
+	// var currentVet = null;
+	let didSucceed = false;
+	const success = function(a){
+		didSucceed = true;
+	}
+	const fail = function(a){console.log(a)}
 
 	it('Should return the vet', (done) => {
+	// console.log('VET2:', Vet)
+
 		// const obj = {
 		// 	googleId: '12356432643',
 		// 	vetname: 'Petsmart'
@@ -53,10 +48,9 @@ describe('Vets', () => {
 		// const action = showAddServiceAction(obj);
 		// expect(action.type).toEqual(SHOW_ADD_SERVICE);
 		// expect(action.payload).toEqual(obj);
-		vet.findById(currentVet.vetId, function(doc) {
-			doc.vetId.should.equal("12356432643");
-			done();
-		});
+		console.log(typeof(Vet.findByVetId))
+		Vet.findByVetId('abc', function(a){ expect(true); }, function(a){ expect(false); })
+		done()
 	});
 });
 
