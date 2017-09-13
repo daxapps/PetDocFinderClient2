@@ -4,12 +4,12 @@
 This web app helps people to find the prices of veterinarian services around a location of their choice. 
 
 ## Screenshots
-![Home](http://i.imgur.com/PETe5hz.png)
-![Home Categories](http://i.imgur.com/qaqmjeD.png)
-![Home without answers](http://i.imgur.com/84FDvYc.png)
-![Home with answers](http://i.imgur.com/1x4ix2k.png)
-![Flashcards](http://i.imgur.com/uvhbiZP.png)
-![Add QnA](http://i.imgur.com/7ZMwnlq.png)
+![Home](https://i.imgur.com/MfLux0k.png)
+![Be Informed](https://i.imgur.com/tL7XNvG.png)
+![Help Others](https://i.imgur.com/9p730IX.png)
+![Veterinarians Map](https://i.imgur.com/GGfFKJv.png)
+![List of Services and Prices](https://i.imgur.com/SnVarz0.png)
+![Add Edit Delete Services](https://i.imgur.com/XJ4tkHx.png)
 
 ## Technology Used
 * HTML/CSS/jQuery
