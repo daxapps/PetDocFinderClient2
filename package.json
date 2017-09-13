@@ -29,6 +29,7 @@
     "redux-form": "^7.0.3",
     "redux-promise": "^0.5.3",
     "redux-thunk": "^2.2.0",
+    "should": "^13.0.1",
     "validator": "^8.0.0"
   },
   "devDependencies": {
