@@ -1,17 +1,14 @@
 footer {
     position: absolute;
     left: 0;
-    /*bottom: 0;*/
     height: 100px;
     width: 100%;
     background-color: black;
-    /*color: white;*/
 }
 
 #myFooter {
     background-color: #3c3d41;
     color: white;
-    padding-top: 30px;
 }
 
 #myFooter .row {
@@ -23,14 +20,12 @@ footer {
 }
 
 #myFooter .footer-copyright {
-    /*background-color: #333333;*/
     padding-top: 3px;
     padding-bottom: 3px;
     text-align: center;
 }
 
 #myFooter .footer-copyright p {
-    /*margin: 10px;*/
     color: #ccc !important;
 }
 
@@ -64,11 +59,8 @@ footer {
 }
 
 @media screen and (max-width: 767px) {
-    #myFooter {
-        text-align: center;
-    }
 
-    .footer-copyright {
+    .social-networks {
         display: none;
     }
 }
