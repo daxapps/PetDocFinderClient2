@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import VetListItem from "./vetlist-item";
 import { googleMaps } from "../actions/vet";
 
-class VetList extends React.Component {
+export class VetList extends React.Component {
 	render() {
 		console.log("VETS: ", this.props);
 		const vetItems = (this.props.vets || []).map((item, index) => {

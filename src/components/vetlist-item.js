@@ -5,7 +5,7 @@ import { showAddServiceAction } from "../actions/vet";
 import Vet from "./vet";
 import { Form, FormGroup } from "react-bootstrap";
 
-class VetListItem extends React.Component {
+export class VetListItem extends React.Component {
 	// constructor(props) {
 	// 	super(props)
 	// 	console.log(props);

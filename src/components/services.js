@@ -4,7 +4,7 @@ import { editService } from "../actions/services";
 import EditForm from "./edit-form";
 import { Form, FormGroup } from "react-bootstrap";
 
-class Service extends React.Component {
+export class Service extends React.Component {
 	constructor(props) {
     super(props);
     this.onSubmit = this.onSubmit.bind(this);

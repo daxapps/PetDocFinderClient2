@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import "./googlemap.css";
 import VetList from "./vet-list";
 
-class GoogleMap extends React.Component {
+export class GoogleMap extends React.Component {
   render() {
     return (
       <div>
