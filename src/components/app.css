@@ -14,6 +14,10 @@ section {
     background: #EA0004;
 }
 
+section:nth-child(3) {
+    /*height: 0;*/
+}
+
 section:nth-child(3) h3 {
     color: #AEF1F8;
 }

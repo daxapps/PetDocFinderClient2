@@ -11,6 +11,10 @@ footer {
     color: white;
 }
 
+#myFooter .container {
+    margin-top: 22px;
+}
+
 #myFooter .row {
     margin-bottom: 60px;
 }
