@@ -103,6 +103,10 @@ a:hover {
 }
 
 @media only screen and (max-width: 500px) {
+    .home h3 {
+        padding-top: 35%;
+    }
+
     .demo-info {
         border: 2px solid darkgray;
         max-width: 80%;
