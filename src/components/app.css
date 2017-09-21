@@ -10,6 +10,12 @@ section {
     text-align: center;
 }
 
+@media screen and (max-height: 500px) {
+    section {
+        height: 160vh;
+    }
+}
+
 .home section:nth-child(odd) {
     background: #EA0004;
 }
