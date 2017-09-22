@@ -9,8 +9,4 @@ describe('<TopNav />', () => {
         shallow( <TopNav /> );
     });
 
-    it("contains spec with an expectation", () => {
-        expect(shallow( <TopNav / > ).is('.navbar')).to.equal(true);
-    });
-
 });
