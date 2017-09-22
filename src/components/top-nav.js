@@ -1,25 +1,27 @@
 import React from "react";
-import { Link } from "react-router-dom";
-
+import { LinkContainer } from "react-router-bootstrap";
+import { Nav, Navbar, NavItem } from 'react-bootstrap';
 import "./top-nav.css";
 
-// const loginHref = (ifLoggedIn) ? /dashboard : #loginform
-// Link to ={loginHref}
 export default function TopNav() {
 	return (
-		<nav className="navbar navbar-default navbar-fixed-top">
-			<div className="container-fluid">
-				<div className=""  id="navbarNav">
-					<ul className="nav navbar-nav navbar-right">
-						<li className="nav-item">
-							<Link to="/register">SignUp</Link>
-						</li>
-						<li className="nav-item">
-							<Link to="/login">Login / Demo</Link>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</nav>
+		<Navbar inverse collapseOnSelect>
+	    <Navbar.Header>
+	      <Navbar.Brand>
+	        <a href="/">Pet Doc Finder</a>
+	      </Navbar.Brand>
+	      <Navbar.Toggle />
+	    </Navbar.Header>
+	    <Navbar.Collapse>
+	      <Nav pullRight>
+	      	<LinkContainer to="/register">
+	        <NavItem eventKey={1}>SignUp</NavItem>
+	        </LinkContainer>
+	        <LinkContainer to="/login">
+	        <NavItem eventKey={2}>Login / Demo</NavItem>
+	        </LinkContainer>
+	      </Nav>
+	    </Navbar.Collapse>
+	  </Navbar>
 	);
 }

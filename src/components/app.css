@@ -1,7 +1,5 @@
 header img {
     width: 100%;
-    margin-top: 60px;
-    /*height: 80vh;*/
 }
 
 section {
@@ -18,10 +16,6 @@ section {
 
 .home section:nth-child(odd) {
     background: #EA0004;
-}
-
-section:nth-child(3) {
-    /*height: 0;*/
 }
 
 section:nth-child(3) h3 {
@@ -92,12 +86,10 @@ input {
 
 a:hover {
     text-decoration: none;
-    /*color: #0ddfff !important;*/
 }
 
 
 /* Dashboard */
-
 .dashboard {
     background-color: #0ddfff;
 }
@@ -119,9 +111,5 @@ a:hover {
 
     .screen-shot img {
         max-width: 75%;
-    }
-
-    .login-page h3, .reg-page h3 {
-        margin-top: 15%;
     }
 }
