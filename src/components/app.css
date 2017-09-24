@@ -78,6 +78,7 @@ label {
 
 input {
     margin-bottom: 20px;
+    cursor: pointer;
 }
 
 .reg-btn {

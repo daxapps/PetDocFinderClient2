@@ -51,6 +51,7 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  cursor: pointer;
 }
 #places li:nth-child(even) {
   background-color: #fcfcfc;
