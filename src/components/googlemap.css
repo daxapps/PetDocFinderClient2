@@ -60,6 +60,10 @@
   margin: 15px 25% 100px;
 }
 
+.add-button a {
+  color: blue;
+}
+
 @media only screen and (max-width: 500px) {
   #map {
     max-width: 95%;

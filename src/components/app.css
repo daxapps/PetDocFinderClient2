@@ -4,7 +4,7 @@ header img {
 
 section {
     height: 100vh;
-    background-color: #AEF1F8;
+    background-color: #0075CE;
     text-align: center;
 }
 
@@ -15,7 +15,7 @@ section {
 }
 
 .home section:nth-child(odd) {
-    background: #EA0004;
+    background: #440C19;
 }
 
 section:nth-child(3) h3 {
@@ -43,7 +43,7 @@ h4 {
 p {
     max-width: 40%;
     margin: 10px auto;
-    color: black;
+    color: white;
 }
 
 .screen-shot img {
@@ -73,6 +73,7 @@ p {
 
 label {
     display: block;
+    color: white;
 }
 
 input {
@@ -84,6 +85,10 @@ input {
     color: black;
 }
 
+a {
+    color: white;
+}
+
 a:hover {
     text-decoration: none;
 }
@@ -91,7 +96,7 @@ a:hover {
 
 /* Dashboard */
 .dashboard {
-    background-color: #0ddfff;
+    background-color: #8EBEFF;
 }
 
 @media only screen and (max-width: 500px) {

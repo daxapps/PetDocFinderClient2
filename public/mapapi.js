@@ -29,7 +29,7 @@ function initMap() {
 
   // Listen for the event fired when the user selects a prediction and retrieve
   // more details for that place
-   searchBox.addListener('places_changed', function() {
+  searchBox.addListener("places_changed", function() {
     var places = searchBox.getPlaces();
 
     if (places.length == 0) {
@@ -58,23 +58,25 @@ function initMap() {
       };
 
       // Create a marker for new location.
-      markers.push(new google.maps.Marker({
-        map: map,
-        icon: pinImage,
-        title: place.name,
-        position: place.geometry.location
-      }));
+      markers.push(
+        new google.maps.Marker({
+          map: map,
+          icon: pinImage,
+          title: place.name,
+          position: place.geometry.location
+        })
+      );
 
       // Crate new markers for surrounding vets
       var service = new google.maps.places.PlacesService(map);
-        service.nearbySearch(
-          {
-            location: place.geometry.location,
-            radius: 10000,
-            type: ["veterinary_care"]
-          },
-          processResults
-        );
+      service.nearbySearch(
+        {
+          location: place.geometry.location,
+          radius: 10000,
+          type: ["veterinary_care"]
+        },
+        processResults
+      );
 
       if (place.geometry.viewport) {
         // Only geocodes have viewport.
@@ -86,11 +88,10 @@ function initMap() {
     map.fitBounds(bounds);
   });
 
-
   // HTML5 geolocation.
   infoWindow = new google.maps.InfoWindow();
   if (navigator.geolocation) {
-  console.log('INFOWINDOW')
+    console.log("INFOWINDOW");
 
     navigator.geolocation.getCurrentPosition(
       function(position) {
