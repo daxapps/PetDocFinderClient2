@@ -2,6 +2,7 @@
 
 ## Summary
 This web app helps people to find the prices of veterinarian services around a location of their choice. 
+My sister told me that every time she moved, one of the first thing she would do is find a veterinarian.  She always had difficulty comparing the prices of their services.  After researching, I found that not very many veterinarians post their prices on their websites, so I made this app to help pet owners have access to more information in order to compare different veterinarians in their desired location.
 
 ## Screenshots
 ![Home](https://i.imgur.com/MfLux0k.png)
