@@ -26,15 +26,21 @@
     width: 50px;
 }
 
+button img {
+    max-width: 20px;
+    margin-right: 5px
+}
+
 .edit-form button,
 .service button,
 .add-form button {
-    height: 2em;
-    width: 4em;
+    height: 2.5em;
+    width: 6em;
     border-radius: 4px;
     margin: 14px 8px 0;
     padding-top: 0;
     border-top: 0;
+    background-color: white;
 }
 
 .edit-form button {
@@ -49,11 +55,11 @@
 }
 
 .plus-btn {
-    background-color: lightgreen;
+    /*background-color: lightgreen;*/
 }
 
 .cancel-btn {
-    background-color: orange;
+    /*background-color: orange;*/
 }
 
 .edit-button {
@@ -63,7 +69,7 @@
 }
 
 .delete-btn {
-    background-color: #EA0004;
+    /*background-color: white;*/
 }
 
 

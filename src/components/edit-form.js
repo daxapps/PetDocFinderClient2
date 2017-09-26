@@ -5,6 +5,10 @@ import { FormGroup, ControlLabel } from "react-bootstrap";
 
 import "./edit-form.css";
 import { deleteService } from "../actions/services";
+import RedPawBtn from "../Images/paw-btn-red.png";
+import GreyPawBtn from "../Images/paw-btn-grey.png";
+import BluePawBtn from "../Images/paw-btn-blue.png";
+import BlackPawBtn from "../Images/paw-btn-black.png";
 
 export class EditForm extends React.Component {
   constructor(props) {
@@ -14,7 +18,6 @@ export class EditForm extends React.Component {
     };
 
     this.onEditClick = this.onEditClick.bind(this);
-
   }
 
   onEditClick(event) {
@@ -41,17 +44,19 @@ export class EditForm extends React.Component {
           <div onClick={() => this.setEditing(true)}>
             <Link to="/dashboard">
               <button className="edit-button">
-                <i className="fa fa-pencil" aria-hidden="true" />
+                <img src={GreyPawBtn} />
+                Edit
               </button>
             </Link>
           </div>
           <div>
             <button
-                className="delete-btn"
-                onClick={this.props.onDeleteClick}
-                data-service-id={this.props.formServiceId}
-              >
-                <i className="fa fa-trash" aria-hidden="true" />
+              className="delete-btn"
+              onClick={this.props.onDeleteClick}
+              data-service-id={this.props.formServiceId}
+            >
+              <img src={RedPawBtn} />
+              Delete
             </button>
           </div>
         </div>
@@ -80,14 +85,16 @@ export class EditForm extends React.Component {
         </FormGroup>{" "}
         <FormGroup controlId="formInlineName">
           <button className="plus-btn" onClick={this.onEditClick}>
-            <i className="fa fa-plus" aria-hidden="true" />
+            <img src={BluePawBtn} />
+            Add
           </button>
           <button
             className="cancel-btn"
             type="button"
             onClick={() => this.setEditing(false)}
           >
-            <i className="fa fa-times" aria-hidden="true" />
+            <img src={BlackPawBtn} />
+            Cancel
           </button>
         </FormGroup>
       </div>
@@ -96,8 +103,7 @@ export class EditForm extends React.Component {
 }
 
 const mapStateToProps = state => {
-  return {
-  };
+  return {};
 };
 
 const mapDispatchToProps = dispatch => {
@@ -109,8 +115,7 @@ const mapDispatchToProps = dispatch => {
         dispatch
       );
     }
-  }
+  };
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(EditForm);
-
