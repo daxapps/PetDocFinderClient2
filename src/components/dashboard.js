@@ -10,7 +10,7 @@ export class Dashboard extends React.Component {
     if (!this.props.loggedIn) {
       return;
     }
-    window.winInitMap()
+    window.winInitMap();
     this.props.dispatch(fetchProtectedData());
   }
 
@@ -30,14 +30,17 @@ export class Dashboard extends React.Component {
         <div className="dashboard-username">
           Username: {this.props.username}
         </div>
-        <div className="dashboard-name">
-          Name: {this.props.name}
-        </div>
+        <div className="dashboard-name">Name: {this.props.name}</div>
         <div className="dashboard-protected-data">
           Protected data: {this.props.protectedData}
         </div>
         <div>
           <h1 style={style}>Pet Doc Finder</h1>
+          <p id="location-link">
+            <a href="http://www.wikihow.com/wikiHowTo?search=enable+location+services">
+              Need to enable location?
+            </a>
+          </p>
           <div>
             <GoogleMap />
           </div>

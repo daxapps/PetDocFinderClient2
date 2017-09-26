@@ -98,6 +98,10 @@ a:hover {
     background-color: #8ebeff;
 }
 
+#location-link {
+    text-align: center;
+}
+
 @media only screen and (max-width: 500px) {
     .home h3 {
         padding-top: 35%;
