@@ -34,7 +34,6 @@ describe('Vets', () => {
 	const fail = function(a){console.log(a)}
 
 	it('Should return the vet', (done) => {
-		console.log(typeof(Vet.findByVetId))
 		Vet.findByVetId('abc', function(a){ expect(true); }, function(a){ expect(false); })
 		done()
 	});
